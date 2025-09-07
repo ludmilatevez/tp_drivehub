@@ -39,8 +39,35 @@ export default class SistemaDeAlquiler {
 
     }
 
+  private estaDisponible(vehiculo: Vehiculo, fechaInicio: Date, fechaFin: Date): boolean {
+
+        let vehiculoEstaDisponible: boolean = this.verificarAutoDisponible(vehiculo);
+
+        let horarioEstaDisponible: boolean = this.verificarHorarioDisponible(fechaInicio, fechaFin);
+
+        return vehiculoEstaDisponible && horarioEstaDisponible;
+    }
 
 
+    private verificarAutoDisponible(vehiculo: Vehiculo): boolean {
+        for (let auto of this.vehiculos) {
+            if (auto.getNumeroMatricula() == vehiculo.getNumeroMatricula() && auto.getEstado() == "Disponible") {
+                return true;
+            }
+        }
 
+        return false;
+
+    }
+
+    private verificarHorarioDisponible(fechaInicio: Date, fechaFin: Date): boolean {
+        for (let reserva of this.reservas) {
+            if (fechaInicio < reserva.getFechaFin() && fechaFin > reserva.getFechaInicio()) {
+                return false;
+            } 
+        }
+
+        return true;
+    }
 
 }
