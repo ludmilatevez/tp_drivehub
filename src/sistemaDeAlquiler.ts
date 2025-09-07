@@ -70,4 +70,23 @@ export default class SistemaDeAlquiler {
         return true;
     }
 
+        private calcularDuracionEnDias(fechaInicio: Date, fechaFin: Date) {
+        let diferenciaEnMilisegundos: number = fechaFin.getTime() - fechaInicio.getTime();
+
+        let unDiaEnMiliSegundos = 24 * 60 * 60 * 1000;
+
+        return diferenciaEnMilisegundos / unDiaEnMiliSegundos;
+
+    }
+
+    private eliminarReserva(reserva: Reserva) {
+        for (let i = 0; i < this.reservas.length; i++) {
+            if (this.reservas[i].getVehiculo().getNumeroMatricula() == reserva.getVehiculo().getNumeroMatricula()) {
+                this.reservas.splice(i);
+            }
+        }
+
+        //excepcion si no encontre la reserva
+    }
+
 }
