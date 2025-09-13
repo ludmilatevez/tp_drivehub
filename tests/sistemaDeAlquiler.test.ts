@@ -52,4 +52,15 @@ describe("Arrancando test en el Sistema",()=>{
             expect(error.message).toEqual("el vehiculo solicitado no esta disponible");
         }
     })
+
+    it ("Si se entrega vehiculo correctamente",()=>{
+        sistema.agregarVehiculo(compacto);
+        sistema.crearReserva(cliente,compacto,fechaInicio,fechaFin);
+        expect(sistema["reservas"].length).toEqual(1);
+        expect(compacto["estado"]).toEqual("En alquiler");
+        sistema.entregarVehiculo(reserva,100);
+        expect(compacto["estado"]).toEqual("Disponible");
+        expect(sistema["reservas"].length).toEqual(0);
+    })
+    
 })
