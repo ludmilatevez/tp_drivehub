@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="13.724">
+  <testsuite name="Arrancando test en el Sistema" errors="0" failures="0" skipped="0" timestamp="2025-09-13T18:12:58" time="10.652" tests="2">
+    <testcase classname="Arrancando test en el Sistema se instancia correctamente se instancia correctamente" name="Arrancando test en el Sistema se instancia correctamente se instancia correctamente" time="0.021">
+    </testcase>
+    <testcase classname="Arrancando test en el Sistema se agrega un vehiculo correctamente se agrega un vehiculo correctamente" name="Arrancando test en el Sistema se agrega un vehiculo correctamente se agrega un vehiculo correctamente" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="Arrancando los test" errors="0" failures="0" skipped="0" timestamp="2025-09-13T18:13:09" time="0.941" tests="3">
+    <testcase classname="Arrancando los test Instanciando compactos Instanciando compactos" name="Arrancando los test Instanciando compactos Instanciando compactos" time="0.008">
+    </testcase>
+    <testcase classname="Arrancando los test Probando metodo con más de 100km Probando metodo con más de 100km" name="Arrancando los test Probando metodo con más de 100km Probando metodo con más de 100km" time="0.006">
+    </testcase>
+    <testcase classname="Arrancando los test Probando metodo con menos de 100 km Probando metodo con menos de 100 km" name="Arrancando los test Probando metodo con menos de 100 km Probando metodo con menos de 100 km" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="Iniciando tests" errors="0" failures="0" skipped="0" timestamp="2025-09-13T18:13:10" time="0.854" tests="1">
+    <testcase classname="Iniciando tests Se instancia correctamente clase Cliente Se instancia correctamente clase Cliente" name="Iniciando tests Se instancia correctamente clase Cliente Se instancia correctamente clase Cliente" time="0.008">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,64 @@
+@startuml DriveHub
+
+title DriveHub
+
+class Vehiculo{
+    #numeroMatricula:string
+    #estado:string
+    #tarifaBase:number
+    #cargo:number
+    
+    +getNumeroMatricula(): string
+    +setEstado(estado: string)
+    +getEstado(): string
+    +abstract calcularCostoFinal(kilometrajeDiario:number,diasReservados:number):number
+}
+class Compacto extends Vehiculo{
+    +calcularCostoFinal(kilometrajeDiario:number,diasReservados:number):number
+}
+class Sedan extends Vehiculo{
+    +calcularCostoFinal(kilometrajeDiario: number, diasReservados: number): number
+}
+class Suv extends Vehiculo{
+    -cargoPorSeguro: number
+
+    +calcularCostoFinal(kilometrajeDiario: number, diasReservados: number): number
+}
+
+class Cliente{
+    #nombre
+    +settersGetters()
+}
+
+class Reserva
+{
+
+    -cliente:Cliente
+    -vehiculo:Vehiculo
+    -fechaInicio:Date
+    -fechaFin:Date
+
+    +getFechaInicio():Date
+    +getFechaFin():Date
+    +getVehiculo():Vehiculo
+    +getCliente():Cliente
+}
+
+class sistemaDeAlquiler{
+    -vehiculos:Vehiculo[]
+    -reservas:Reserva[]
+
+    +agregarVehiculo(vehiculo:Vehiculo)
+    +crearReserva(cliente: Cliente, vehiculo: Vehiculo, fechaInicio: Date, fechaFin: Date)
+    +entregarVehiculo(reserva: Reserva, kilometrajeDiario: number)
+    -estaDisponible(vehiculo: Vehiculo, fechaInicio: Date, fechaFin: Date): boolean
+    -verificarAutoDisponible(vehiculo: Vehiculo): boolean
+    -verificarHorarioDisponible(fechaInicio: Date, fechaFin: Date): boolean 
+    -calcularDuracionEnDias(fechaInicio: Date, fechaFin: Date)
+    -eliminarReserva(reserva: Reserva)
+}
+
+sistemaDeAlquiler *-- Vehiculo
+sistemaDeAlquiler *-- Cliente 
+sistemaDeAlquiler *-- Reserva
+@enduml

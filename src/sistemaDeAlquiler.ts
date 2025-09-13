@@ -1,5 +1,6 @@
 import Cliente from "./cliente";
 import Vehiculo from "./vehiculo";
+import Reserva from "./reserva";
 
 export default class SistemaDeAlquiler {
     private vehiculos: Array<Vehiculo>
@@ -9,6 +10,10 @@ export default class SistemaDeAlquiler {
     constructor() {
         this.vehiculos = new Array<Vehiculo>;
         this.reservas = new Array<Reserva>;
+    }
+
+    public agregarVehiculo(vehiculo:Vehiculo){
+        this.vehiculos.push(vehiculo);
     }
 
     public crearReserva(cliente: Cliente, vehiculo: Vehiculo, fechaInicio: Date, fechaFin: Date) {
@@ -39,7 +44,7 @@ export default class SistemaDeAlquiler {
 
     }
 
-  private estaDisponible(vehiculo: Vehiculo, fechaInicio: Date, fechaFin: Date): boolean {
+    private estaDisponible(vehiculo: Vehiculo, fechaInicio: Date, fechaFin: Date): boolean {
 
         let vehiculoEstaDisponible: boolean = this.verificarAutoDisponible(vehiculo);
 
@@ -70,7 +75,7 @@ export default class SistemaDeAlquiler {
         return true;
     }
 
-        private calcularDuracionEnDias(fechaInicio: Date, fechaFin: Date) {
+    private calcularDuracionEnDias(fechaInicio: Date, fechaFin: Date) {
         let diferenciaEnMilisegundos: number = fechaFin.getTime() - fechaInicio.getTime();
 
         let unDiaEnMiliSegundos = 24 * 60 * 60 * 1000;
