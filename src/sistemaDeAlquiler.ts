@@ -30,13 +30,14 @@ export default class SistemaDeAlquiler {
 
     public entregarVehiculo(reserva: Reserva, kilometrajeDiario: number) {
         const vehiculo: Vehiculo = reserva.getVehiculo();
-        const cliente: Cliente = reserva.getCliente();
+        //const cliente: Cliente = reserva.getCliente();
         const fechaInicio: Date = reserva.getFechaInicio();
         const fechaFin: Date = reserva.getFechaFin();
 
         const diasReservados: number = this.calcularDuracionEnDias(fechaInicio, fechaFin);
 
         const costoFinal: number = vehiculo.calcularCostoFinal(kilometrajeDiario, diasReservados);
+        console.log(`Costo total: ${costoFinal}`);
 
         vehiculo.setEstado("Disponible");
 

@@ -8,7 +8,6 @@ export default abstract class Vehiculo {
     constructor(numeroMatricula: string, estado: string, tarifaBase: number, cargo: number) {
         this.numeroMatricula = numeroMatricula;
         this.estado = estado;
-
         this.tarifaBase = tarifaBase;
         this.cargo = cargo;
     }
