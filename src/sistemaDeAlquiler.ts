@@ -5,6 +5,7 @@ import CalculadoraDuracion from "./calculadoraDuracion";
 import RepositorioReservas from "./repositorioReservas";
 import VerificadorDisponibilidad from "./verificadorDisponibilidad";
 import RepositorioVehiculos from "./repositorioVehiculos";
+import EstadoEnMantenimiento from "./estadoEnMantenimiento";
 
 export default class SistemaDeAlquiler {
     private repositorioVehiculos: RepositorioVehiculos;
@@ -28,7 +29,7 @@ export default class SistemaDeAlquiler {
 
         if (this.verificadorDisponibilidad.estaDisponible(vehiculo, fechaInicio, fechaFin)) {
             this.repositorioReservas.agregarReserva(cliente, vehiculo, fechaInicio, fechaFin);
-            vehiculo.setEstado("En alquiler");
+            vehiculo.intentarAlquilar();
         } else {
             throw new Error("el vehiculo solicitado no esta disponible para ser alquilado");
         }
@@ -40,12 +41,17 @@ export default class SistemaDeAlquiler {
         const fechaInicio: Date = reserva.getFechaInicio();
         const fechaFin: Date = reserva.getFechaFin();
 
+        vehiculo.intentarDevolver();
+
+        vehiculo.actualizarKilometros(totalKilometrosRecorridos);//necesito calcular este numero o que me den ese por parametro, preguntar
+        vehiculo.incrementarAlquileres();
+
+        if (vehiculo.necesitaMantenimientoPorKm() || vehiculo.necesitaMantenimientoPorTiempo() || vehiculo.necesitaMantenimientoPorAlquileres()) {
+            vehiculo.setEstado(new EstadoEnMantenimiento());
+        }
+
         const diasReservados: number = CalculadoraDuracion.calcularDuracionEnDias(fechaInicio, fechaFin);
-
         const costoFinal: number = vehiculo.calcularCostoFinal(kilometrajeDiario, diasReservados);
-
-
-        vehiculo.setEstado("Disponible");
 
         this.repositorioReservas.eliminarReserva(reserva);
 
