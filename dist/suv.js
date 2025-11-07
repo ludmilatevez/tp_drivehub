@@ -7,16 +7,19 @@ const vehiculo_1 = __importDefault(require("./vehiculo"));
 class Suv extends vehiculo_1.default {
     cargoPorSeguro;
     constructor(numeroMatricula) {
-        super(numeroMatricula, "Disponible", 80, 0.25);
+        super(numeroMatricula, 80, 0.25, 30);
         this.cargoPorSeguro = 15;
     }
-    calcularCostoFinal(kilometrajeDiario, diasReservados) {
+    calcularCostoFinal(kilometrajeTotal, diasReservados, temporada) {
         let adicional = 0;
         let costoFinal;
+        const kilometrajeDiario = kilometrajeTotal / diasReservados;
+        const factorAjuste = temporada.obtenerFactorAjuste();
+        const tarifaBaseAjustada = this.tarifaBase * factorAjuste;
         if (kilometrajeDiario * diasReservados > 500) {
             adicional = this.cargo * kilometrajeDiario;
         }
-        costoFinal = diasReservados * (this.tarifaBase + this.cargoPorSeguro + adicional);
+        costoFinal = diasReservados * (tarifaBaseAjustada + this.cargoPorSeguro + adicional);
         return costoFinal;
     }
 }

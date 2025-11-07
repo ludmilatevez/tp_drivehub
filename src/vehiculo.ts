@@ -1,5 +1,7 @@
+import CalculadoraDuracion from "./calculadoraDuracion";
 import EstadoDisponible from "./estadoDisponible";
-import IVehiculoEstado from "./ivehiculoEstado";
+import ITemporada from "./iTemporada";
+import IVehiculoEstado from "./iVehiculoEstado";
 
 export default abstract class Vehiculo {
     protected numeroMatricula: string;
@@ -7,22 +9,71 @@ export default abstract class Vehiculo {
 
     protected tarifaBase: number;
     protected cargo: number;
-
+    protected costoDeMantenimiento: number;
 
     protected kmDesdeElUltimoMantenimiento: number;
     protected fechaUltimoMantenimiento: Date;
-    protected alquileresCompletados: number;//desde que volvio del mantenimiento?
+    protected alquileresCompletadosTotales: number;
+    protected alquileresParaMantenimiento: number;
 
-    constructor(numeroMatricula: string, tarifaBase: number, cargo: number) {
+
+
+    protected rentabilidad: number;
+
+    constructor(numeroMatricula: string, tarifaBase: number, cargo: number, costoDeMantenimiento: number) {
         this.numeroMatricula = numeroMatricula;
         this.estado = new EstadoDisponible();
+        this.estado.setContexto(this);
         this.tarifaBase = tarifaBase;
         this.cargo = cargo;
+        this.costoDeMantenimiento = costoDeMantenimiento;
 
         this.kmDesdeElUltimoMantenimiento = 0;
         this.fechaUltimoMantenimiento = new Date();
-        this.alquileresCompletados = 0;
+        this.alquileresCompletadosTotales = 0;
+        this.alquileresParaMantenimiento = 0;
 
+        this.rentabilidad = 0;
+
+    }
+
+    public necesitaMantenimientoPorAlquileres(): boolean {
+        return this.alquileresParaMantenimiento === 5;
+    }
+
+
+    public necesitaMantenimientoPorKm(): boolean {
+        return this.kmDesdeElUltimoMantenimiento >= 10000;
+    }
+
+    public necesitaMantenimientoPorTiempo(fechaFinAlquiler: Date): boolean {
+        const mecesTranscurridos: number = CalculadoraDuracion.calcularDuracionEnMeces(this.fechaUltimoMantenimiento, fechaFinAlquiler);
+        return mecesTranscurridos >= 12;
+    }
+
+    public getCostoMantenimiento(): number {
+        return this.costoDeMantenimiento;
+    }
+
+    public getRentabilidad(): number {
+        return this.rentabilidad;
+    }
+
+    public disminuirRentabilidad(costoMantenimiento: number): void {
+        this.rentabilidad -= costoMantenimiento;
+    }
+
+    public aumentarRentabilidad(ingresoPorAlquiler: number): void {
+        this.rentabilidad += ingresoPorAlquiler;
+    }
+
+    public incrementarAlquileres(): void {
+        this.alquileresCompletadosTotales++;
+        this.alquileresParaMantenimiento++;
+    }
+
+    public actualizarKilometros(totalKilometrosRecorridos: number): void {
+        this.kmDesdeElUltimoMantenimiento += totalKilometrosRecorridos;
     }
 
     public getKmDesdeElUltimoMantenimiento(): number {
@@ -34,32 +85,45 @@ export default abstract class Vehiculo {
     }
 
     public getAlquileresCompletados(): number {
-        return this.alquileresCompletados;
+        return this.alquileresCompletadosTotales;
     }
-    
+
     public getNumeroMatricula(): string {
         return this.numeroMatricula;
     }
 
-
-    public setEstado(estado: IVehiculoEstado) {
-        this.estado = estado;
+    public getCantidadTotalAlquileres(): number {
+        return this.alquileresCompletadosTotales;
     }
 
-    public getEstado(): string {
-        return this.estado.getNombre();//provisorio, queda feo devolver el string para compararlo
+
+    public setEstado(estado: IVehiculoEstado): void {
+        this.estado = estado;
+        this.estado.setContexto(this);
+    }
+
+    public estaEnAlquiler(): boolean {
+        return this.estado.estaEnAlquiler();
+    }
+
+    public estaDisponible(): boolean {
+        return this.estado.estaDisponible();
+    }
+
+    public estaEnMantenimiento(): boolean {
+        return this.estado.estaEnMantenimiento();
     }
 
     public intentarAlquilar(): void {
-        this.estado.alquilar(this);
+        this.estado.alquilar();
     }
 
 
     public intentarDevolver(): void {
-        this.estado.devolver(this);
+        this.estado.devolver();
     }
 
-    public abstract calcularCostoFinal(kilometrajeDiario: number, diasReservados: number): number;
+    public abstract calcularCostoFinal(kilometrajeTotal: number, diasReservados: number, temporada: ITemporada): number;
 
 
 

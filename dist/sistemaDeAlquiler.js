@@ -3,66 +3,47 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const reserva_1 = __importDefault(require("./reserva"));
+const calculadoraDuracion_1 = __importDefault(require("./calculadoraDuracion"));
+const verificadorDisponibilidad_1 = __importDefault(require("./verificadorDisponibilidad"));
+const estadoEnMantenimiento_1 = __importDefault(require("./estadoEnMantenimiento"));
 class SistemaDeAlquiler {
-    vehiculos;
-    reservas;
-    constructor() {
-        this.vehiculos = new Array;
-        this.reservas = new Array;
+    repositorioVehiculos;
+    repositorioReservas;
+    verificadorDisponibilidad;
+    constructor(repositorioVehiculos, repositorioReservas) {
+        this.repositorioVehiculos = repositorioVehiculos;
+        this.repositorioReservas = repositorioReservas;
+        this.verificadorDisponibilidad = new verificadorDisponibilidad_1.default(repositorioVehiculos, repositorioReservas);
     }
-    crearReserva(cliente, vehiculo, fechaInicio, fechaFin) {
-        if (this.estaDisponible(vehiculo, fechaInicio, fechaFin)) {
-            const reserva = new reserva_1.default(cliente, vehiculo, fechaInicio, fechaFin);
-            this.reservas.push(reserva);
-            vehiculo.setEstado("En alquiler");
+    agregarVehiculo(vehiculo) {
+        this.repositorioVehiculos.agregarVehiculo(vehiculo);
+    }
+    crearReserva(cliente, vehiculo, fechaInicio, fechaFin, temporada) {
+        if (this.verificadorDisponibilidad.estaDisponible(vehiculo, fechaInicio, fechaFin)) {
+            this.repositorioReservas.agregarReserva(cliente, vehiculo, fechaInicio, fechaFin, temporada);
+            vehiculo.intentarAlquilar();
         }
         else {
-            throw new Error("el vehiculo solicitado no esta disponible");
+            throw new Error("el vehiculo solicitado no esta disponible para ser alquilado");
         }
     }
-    entregarVehiculo(reserva, kilometrajeDiario) {
+    entregarVehiculo(reserva, kilometrajeTotal) {
         const vehiculo = reserva.getVehiculo();
-        const cliente = reserva.getCliente();
         const fechaInicio = reserva.getFechaInicio();
         const fechaFin = reserva.getFechaFin();
-        const diasReservados = this.calcularDuracionEnDias(fechaInicio, fechaFin);
-        const costoFinal = vehiculo.calcularCostoFinal(kilometrajeDiario, diasReservados);
-        vehiculo.setEstado("Disponible");
-        this.eliminarReserva(reserva);
-    }
-    estaDisponible(vehiculo, fechaInicio, fechaFin) {
-        let vehiculoEstaDisponible = this.verificarAutoDisponible(vehiculo);
-        let horarioEstaDisponible = this.verificarHorarioDisponible(fechaInicio, fechaFin);
-        return vehiculoEstaDisponible && horarioEstaDisponible;
-    }
-    verificarAutoDisponible(vehiculo) {
-        for (let auto of this.vehiculos) {
-            if (auto.getNumeroMatricula() == vehiculo.getNumeroMatricula() && auto.getEstado() == "Disponible") {
-                return true;
-            }
+        const temporada = reserva.getTemporada();
+        vehiculo.intentarDevolver();
+        vehiculo.actualizarKilometros(kilometrajeTotal);
+        vehiculo.incrementarAlquileres();
+        if (vehiculo.necesitaMantenimientoPorKm() || vehiculo.necesitaMantenimientoPorTiempo(fechaFin) || vehiculo.necesitaMantenimientoPorAlquileres()) {
+            vehiculo.setEstado(new estadoEnMantenimiento_1.default());
+            const costoMantenimiento = vehiculo.getCostoMantenimiento();
+            vehiculo.disminuirRentabilidad(costoMantenimiento);
         }
-        return false;
-    }
-    verificarHorarioDisponible(fechaInicio, fechaFin) {
-        for (let reserva of this.reservas) {
-            if (fechaInicio < reserva.getFechaFin() && fechaFin > reserva.getFechaInicio()) {
-                return false;
-            }
-        }
-        return true;
-    }
-    calcularDuracionEnDias(fechaInicio, fechaFin) {
-        let diferenciaEnMilisegundos = fechaFin.getTime() - fechaInicio.getTime();
-        let unDiaEnMiliSegundos = 24 * 60 * 60 * 1000;
-        return diferenciaEnMilisegundos / unDiaEnMiliSegundos;
-    }
-    eliminarReserva(reserva) {
-        for (let i = 0; i < this.reservas.length; i++) {
-            if (this.reservas[i].getVehiculo().getNumeroMatricula() == reserva.getVehiculo().getNumeroMatricula()) {
-                this.reservas.splice(i);
-            }
-        }
+        const diasReservados = calculadoraDuracion_1.default.calcularDuracionEnDias(fechaInicio, fechaFin);
+        const costoFinal = vehiculo.calcularCostoFinal(kilometrajeTotal, diasReservados, temporada);
+        vehiculo.aumentarRentabilidad(costoFinal);
+        this.repositorioReservas.eliminarReserva(reserva);
     }
 }
 exports.default = SistemaDeAlquiler;

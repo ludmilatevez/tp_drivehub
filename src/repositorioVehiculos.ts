@@ -19,7 +19,7 @@ export default class RepositorioVehiculos {
         return Array.from(this.vehiculos.values());
     }
 
-    public eliminarPorMatricula(matricula: string) {
+    public eliminarPorMatricula(matricula: string): void {
         const eliminado = this.vehiculos.delete(matricula);
 
         if (!eliminado) {

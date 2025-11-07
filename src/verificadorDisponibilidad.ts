@@ -14,24 +14,26 @@ export default class VerificadorDisponibilidad {
 
     public estaDisponible(vehiculo: Vehiculo, fechainicio: Date, fechaFin: Date): boolean {
         const autoEstaDisponible: boolean = this.verificarAutoDisponible(vehiculo);
-       
+
         if (!autoEstaDisponible) {
             return false;
         }
 
-        const reservasConflicto: Array<Reserva>  = this.repositorioReservas.obtenerReservasEnConflicto(fechainicio, fechaFin);
+        const reservasConflicto: Array<Reserva> = this.repositorioReservas.obtenerReservasEnConflicto(fechainicio, fechaFin);
 
-        const conflictoParaEsteVehiculo = reservasConflicto.some(reserva =>
-            reserva.getVehiculo().getNumeroMatricula() === vehiculo.getNumeroMatricula()
-        );
+        for (const reservaConflicto of reservasConflicto) {
+            if (reservaConflicto.getVehiculo().getNumeroMatricula() === vehiculo.getNumeroMatricula()) {
+                return false;
+            }
+        }
 
-        return !conflictoParaEsteVehiculo;
+        return true;
     }
 
     private verificarAutoDisponible(vehiculo: Vehiculo): boolean {
         const autoEncontrado = this.repositorioVehiculos.obtenerPorMatricula(vehiculo.getNumeroMatricula());
 
-        return autoEncontrado !== undefined && autoEncontrado.getEstado() === "Disponible";
+        return autoEncontrado !== undefined && autoEncontrado.estaDisponible();
     }
 
 }

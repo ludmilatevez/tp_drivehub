@@ -6,15 +6,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const vehiculo_1 = __importDefault(require("./vehiculo"));
 class Compacto extends vehiculo_1.default {
     constructor(numeroMatricula) {
-        super(numeroMatricula, "Disponible", 30, 0.15);
+        super(numeroMatricula, 30, 0.15, 20);
     }
-    calcularCostoFinal(kilometrajeDiario, diasReservados) {
+    calcularCostoFinal(kilometrajeTotal, diasReservados, temporada) {
         let adicional = 0;
         let costoFinal;
+        const kilometrajeDiario = kilometrajeTotal / diasReservados;
+        const factorAjuste = temporada.obtenerFactorAjuste();
+        const tarifaBaseAjustada = this.tarifaBase * factorAjuste;
         if (kilometrajeDiario > 100) {
             adicional = this.cargo * kilometrajeDiario;
         }
-        costoFinal = diasReservados * (this.tarifaBase + adicional);
+        costoFinal = diasReservados * (tarifaBaseAjustada + adicional);
         return costoFinal;
     }
 }
