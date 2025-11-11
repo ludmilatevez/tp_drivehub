@@ -9,8 +9,8 @@ class RepositorioReservas {
     historialReservas;
     siguienteId = 1;
     constructor() {
-        this.reservas = new Map;
-        this.historialReservas = new Map;
+        this.reservas = new Map();
+        this.historialReservas = new Map();
     }
     agregarReserva(cliente, vehiculo, fechaInicio, fechaFin, temporada) {
         const nuevaReserva = new reserva_1.default(this.siguienteId, cliente, vehiculo, fechaInicio, fechaFin, temporada);

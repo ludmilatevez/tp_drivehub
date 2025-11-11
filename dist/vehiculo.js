@@ -36,8 +36,8 @@ class Vehiculo {
         return this.kmDesdeElUltimoMantenimiento >= 10000;
     }
     necesitaMantenimientoPorTiempo(fechaFinAlquiler) {
-        const mecesTranscurridos = calculadoraDuracion_1.default.calcularDuracionEnMeces(this.fechaUltimoMantenimiento, fechaFinAlquiler);
-        return mecesTranscurridos >= 12;
+        const meses = calculadoraDuracion_1.default.calcularDuracionEnMeses(this.fechaUltimoMantenimiento, fechaFinAlquiler);
+        return meses >= 12;
     }
     getCostoMantenimiento() {
         return this.costoDeMantenimiento;

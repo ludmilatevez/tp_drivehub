@@ -5,13 +5,13 @@ class CalculadoraDuracion {
         const diferenciaEnMilisegundos = fechaFin.getTime() - fechaInicio.getTime();
         const unDiaEnMiliSegundos = 24 * 60 * 60 * 1000;
         const duracionEnDias = diferenciaEnMilisegundos / unDiaEnMiliSegundos;
-        return duracionEnDias;
+        return Math.abs(duracionEnDias);
     }
-    static calcularDuracionEnMeces(fechaInicio, fechaFin) {
+    static calcularDuracionEnMeses(fechaInicio, fechaFin) {
         const diferenciaAnios = fechaFin.getFullYear() - fechaInicio.getFullYear();
-        const diferenciaMeces = fechaFin.getMonth() - fechaInicio.getMonth();
-        const mecesTranscurridos = (diferenciaAnios * 12) + diferenciaMeces;
-        return mecesTranscurridos;
+        const diferenciaMeses = fechaFin.getMonth() - fechaInicio.getMonth();
+        const mesesTranscurridos = (diferenciaAnios * 12) + diferenciaMeses;
+        return Math.abs(mesesTranscurridos);
     }
 }
 exports.default = CalculadoraDuracion;

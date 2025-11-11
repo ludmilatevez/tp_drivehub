@@ -35,7 +35,9 @@ class SistemaDeAlquiler {
         vehiculo.intentarDevolver();
         vehiculo.actualizarKilometros(kilometrajeTotal);
         vehiculo.incrementarAlquileres();
-        if (vehiculo.necesitaMantenimientoPorKm() || vehiculo.necesitaMantenimientoPorTiempo(fechaFin) || vehiculo.necesitaMantenimientoPorAlquileres()) {
+        if (vehiculo.necesitaMantenimientoPorKm() ||
+            vehiculo.necesitaMantenimientoPorTiempo(fechaFin) ||
+            vehiculo.necesitaMantenimientoPorAlquileres()) {
             vehiculo.setEstado(new estadoEnMantenimiento_1.default());
             const costoMantenimiento = vehiculo.getCostoMantenimiento();
             vehiculo.disminuirRentabilidad(costoMantenimiento);

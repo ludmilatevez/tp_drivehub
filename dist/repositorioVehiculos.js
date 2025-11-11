@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class RepositorioVehiculos {
     vehiculos;
     constructor() {
-        this.vehiculos = new Map;
+        this.vehiculos = new Map();
     }
     agregarVehiculo(vehiculo) {
         this.vehiculos.set(vehiculo.getNumeroMatricula(), vehiculo);

@@ -19,7 +19,8 @@ class Suv extends vehiculo_1.default {
         if (kilometrajeDiario * diasReservados > 500) {
             adicional = this.cargo * kilometrajeDiario;
         }
-        costoFinal = diasReservados * (tarifaBaseAjustada + this.cargoPorSeguro + adicional);
+        costoFinal =
+            diasReservados * (tarifaBaseAjustada + this.cargoPorSeguro + adicional);
         return costoFinal;
     }
 }

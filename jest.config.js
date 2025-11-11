@@ -3,12 +3,18 @@ console.log('Execution dir:', __dirname);
 // require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 module.exports = {
   automock: false,
+
+  clearMocks: true,
+  resetMocks: true,
+  restoreMocks: true,
+  //collectCoverageFrom: ["src/*/.ts", "!src/*/.d.ts"],
+
   collectCoverage: true,
   coverageProvider: 'v8', //v8 seems to be really precise. and give us more accurate coverage on sonar
   coverageReporters: ["clover", "json", "lcov", ["text", { "skipFull": true }]],
   preset: "ts-jest",
   testEnvironment: "node",
-  testMatch: ["<rootDir>/tests/**/*.test.ts"],
+  testMatch: ["<rootDir>/tests/*/.test.ts"],
   testPathIgnorePatterns: [
     "node_modules",
     "tests/data.ts",
