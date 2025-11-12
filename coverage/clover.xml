@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1762889974535" clover="3.2.0">
-  <project timestamp="1762889974536" name="All files">
-    <metrics statements="1609" coveredstatements="1306" conditionals="126" coveredconditionals="121" methods="104" coveredmethods="99" elements="1839" coveredelements="1526" complexity="0" loc="1609" ncloc="1609" packages="1" files="18" classes="18"/>
-    <file name="calculadoraDuracion.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\calculadoraDuracion.ts">
+<coverage generated="1762906515986" clover="3.2.0">
+  <project timestamp="1762906515986" name="All files">
+    <metrics statements="1609" coveredstatements="1301" conditionals="126" coveredconditionals="121" methods="104" coveredmethods="99" elements="1839" coveredelements="1521" complexity="0" loc="1609" ncloc="1609" packages="1" files="18" classes="18"/>
+    <file name="calculadoraDuracion.ts" path="/home/cabeza/tp_drivehub/src/calculadoraDuracion.ts">
       <metrics statements="46" coveredstatements="46" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -51,13 +51,13 @@
       <line num="45" count="5" type="stmt"/>
       <line num="46" count="1" type="stmt"/>
     </file>
-    <file name="cliente.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\cliente.ts">
+    <file name="cliente.ts" path="/home/cabeza/tp_drivehub/src/cliente.ts">
       <metrics statements="39" coveredstatements="39" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
-      <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="5" count="7" type="cond" truecount="1" falsecount="0"/>
       <line num="6" count="7" type="stmt"/>
       <line num="7" count="7" type="stmt"/>
       <line num="8" count="7" type="stmt"/>
@@ -93,7 +93,7 @@
       <line num="38" count="2" type="stmt"/>
       <line num="39" count="7" type="stmt"/>
     </file>
-    <file name="compacto.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\compacto.ts">
+    <file name="compacto.ts" path="/home/cabeza/tp_drivehub/src/compacto.ts">
       <metrics statements="68" coveredstatements="68" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -164,8 +164,8 @@
       <line num="67" count="2" type="stmt"/>
       <line num="68" count="1" type="stmt"/>
     </file>
-    <file name="estadoDisponible.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\estadoDisponible.ts">
-      <metrics statements="103" coveredstatements="36" conditionals="10" coveredconditionals="9" methods="10" coveredmethods="9"/>
+    <file name="estadoDisponible.ts" path="/home/cabeza/tp_drivehub/src/estadoDisponible.ts">
+      <metrics statements="103" coveredstatements="35" conditionals="10" coveredconditionals="9" methods="10" coveredmethods="9"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
@@ -183,7 +183,7 @@
       <line num="15" count="1" type="stmt"/>
       <line num="16" count="1" type="stmt"/>
       <line num="17" count="1" type="stmt"/>
-      <line num="18" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="18" count="0" type="cond" truecount="0" falsecount="1"/>
       <line num="19" count="0" type="stmt"/>
       <line num="20" count="0" type="stmt"/>
       <line num="21" count="0" type="stmt"/>
@@ -270,8 +270,8 @@
       <line num="102" count="1" type="stmt"/>
       <line num="103" count="0" type="stmt"/>
     </file>
-    <file name="estadoEnAlquiler.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\estadoEnAlquiler.ts">
-      <metrics statements="106" coveredstatements="34" conditionals="10" coveredconditionals="9" methods="10" coveredmethods="9"/>
+    <file name="estadoEnAlquiler.ts" path="/home/cabeza/tp_drivehub/src/estadoEnAlquiler.ts">
+      <metrics statements="106" coveredstatements="33" conditionals="10" coveredconditionals="9" methods="10" coveredmethods="9"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
@@ -287,7 +287,7 @@
       <line num="13" count="1" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
       <line num="15" count="1" type="stmt"/>
-      <line num="16" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
       <line num="17" count="0" type="stmt"/>
       <line num="18" count="0" type="stmt"/>
       <line num="19" count="0" type="stmt"/>
@@ -379,8 +379,8 @@
       <line num="105" count="1" type="stmt"/>
       <line num="106" count="0" type="stmt"/>
     </file>
-    <file name="estadoEnMantenimiento.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\estadoEnMantenimiento.ts">
-      <metrics statements="102" coveredstatements="34" conditionals="10" coveredconditionals="9" methods="10" coveredmethods="9"/>
+    <file name="estadoEnMantenimiento.ts" path="/home/cabeza/tp_drivehub/src/estadoEnMantenimiento.ts">
+      <metrics statements="102" coveredstatements="33" conditionals="10" coveredconditionals="9" methods="10" coveredmethods="9"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
@@ -396,7 +396,7 @@
       <line num="13" count="1" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
       <line num="15" count="1" type="stmt"/>
-      <line num="16" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
       <line num="17" count="0" type="stmt"/>
       <line num="18" count="0" type="stmt"/>
       <line num="19" count="0" type="stmt"/>
@@ -484,7 +484,7 @@
       <line num="101" count="1" type="stmt"/>
       <line num="102" count="0" type="stmt"/>
     </file>
-    <file name="generadorReportes.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\generadorReportes.ts">
+    <file name="generadorReportes.ts" path="/home/cabeza/tp_drivehub/src/generadorReportes.ts">
       <metrics statements="159" coveredstatements="159" conditionals="10" coveredconditionals="10" methods="5" coveredmethods="5"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -503,7 +503,7 @@
       <line num="15" count="1" type="stmt"/>
       <line num="16" count="1" type="stmt"/>
       <line num="17" count="1" type="stmt"/>
-      <line num="18" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="18" count="5" type="cond" truecount="1" falsecount="0"/>
       <line num="19" count="5" type="stmt"/>
       <line num="20" count="5" type="stmt"/>
       <line num="21" count="5" type="stmt"/>
@@ -646,7 +646,7 @@
       <line num="158" count="1" type="stmt"/>
       <line num="159" count="5" type="stmt"/>
     </file>
-    <file name="repositorioReservas.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\repositorioReservas.ts">
+    <file name="repositorioReservas.ts" path="/home/cabeza/tp_drivehub/src/repositorioReservas.ts">
       <metrics statements="136" coveredstatements="136" conditionals="13" coveredconditionals="13" methods="8" coveredmethods="8"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -663,7 +663,7 @@
       <line num="13" count="1" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
       <line num="15" count="1" type="stmt"/>
-      <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="16" count="11" type="cond" truecount="1" falsecount="0"/>
       <line num="17" count="11" type="stmt"/>
       <line num="18" count="11" type="stmt"/>
       <line num="19" count="11" type="stmt"/>
@@ -785,7 +785,7 @@
       <line num="135" count="1" type="stmt"/>
       <line num="136" count="11" type="stmt"/>
     </file>
-    <file name="repositorioVehiculos.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\repositorioVehiculos.ts">
+    <file name="repositorioVehiculos.ts" path="/home/cabeza/tp_drivehub/src/repositorioVehiculos.ts">
       <metrics statements="67" coveredstatements="67" conditionals="7" coveredconditionals="7" methods="6" coveredmethods="6"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -797,7 +797,7 @@
       <line num="8" count="1" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
-      <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="11" count="6" type="cond" truecount="1" falsecount="0"/>
       <line num="12" count="6" type="stmt"/>
       <line num="13" count="6" type="stmt"/>
       <line num="14" count="6" type="stmt"/>
@@ -855,8 +855,8 @@
       <line num="66" count="2" type="stmt"/>
       <line num="67" count="6" type="stmt"/>
     </file>
-    <file name="reserva.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\reserva.ts">
-      <metrics statements="108" coveredstatements="46" conditionals="8" coveredconditionals="7" methods="8" coveredmethods="7"/>
+    <file name="reserva.ts" path="/home/cabeza/tp_drivehub/src/reserva.ts">
+      <metrics statements="108" coveredstatements="45" conditionals="8" coveredconditionals="7" methods="8" coveredmethods="7"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
@@ -876,7 +876,7 @@
       <line num="17" count="1" type="stmt"/>
       <line num="18" count="1" type="stmt"/>
       <line num="19" count="1" type="stmt"/>
-      <line num="20" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="20" count="0" type="cond" truecount="0" falsecount="1"/>
       <line num="21" count="0" type="stmt"/>
       <line num="22" count="0" type="stmt"/>
       <line num="23" count="0" type="stmt"/>
@@ -966,7 +966,7 @@
       <line num="107" count="1" type="stmt"/>
       <line num="108" count="0" type="stmt"/>
     </file>
-    <file name="sedan.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\sedan.ts">
+    <file name="sedan.ts" path="/home/cabeza/tp_drivehub/src/sedan.ts">
       <metrics statements="63" coveredstatements="63" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -1032,7 +1032,7 @@
       <line num="62" count="2" type="stmt"/>
       <line num="63" count="1" type="stmt"/>
     </file>
-    <file name="sistemaDeAlquiler.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\sistemaDeAlquiler.ts">
+    <file name="sistemaDeAlquiler.ts" path="/home/cabeza/tp_drivehub/src/sistemaDeAlquiler.ts">
       <metrics statements="154" coveredstatements="154" conditionals="9" coveredconditionals="9" methods="5" coveredmethods="5"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -1054,7 +1054,7 @@
       <line num="18" count="1" type="stmt"/>
       <line num="19" count="1" type="stmt"/>
       <line num="20" count="1" type="stmt"/>
-      <line num="21" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="21" count="5" type="cond" truecount="1" falsecount="0"/>
       <line num="22" count="5" type="stmt"/>
       <line num="23" count="5" type="stmt"/>
       <line num="24" count="5" type="stmt"/>
@@ -1189,7 +1189,7 @@
       <line num="153" count="2" type="stmt"/>
       <line num="154" count="5" type="stmt"/>
     </file>
-    <file name="suv.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\suv.ts">
+    <file name="suv.ts" path="/home/cabeza/tp_drivehub/src/suv.ts">
       <metrics statements="73" coveredstatements="73" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -1209,7 +1209,7 @@
       <line num="16" count="1" type="stmt"/>
       <line num="17" count="1" type="stmt"/>
       <line num="18" count="1" type="stmt"/>
-      <line num="19" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="19" count="11" type="cond" truecount="1" falsecount="0"/>
       <line num="20" count="11" type="stmt"/>
       <line num="21" count="11" type="stmt"/>
       <line num="22" count="11" type="stmt"/>
@@ -1265,7 +1265,7 @@
       <line num="72" count="2" type="stmt"/>
       <line num="73" count="11" type="stmt"/>
     </file>
-    <file name="temporadaAlta.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\temporadaAlta.ts">
+    <file name="temporadaAlta.ts" path="/home/cabeza/tp_drivehub/src/temporadaAlta.ts">
       <metrics statements="22" coveredstatements="22" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -1290,7 +1290,7 @@
       <line num="21" count="3" type="stmt"/>
       <line num="22" count="1" type="stmt"/>
     </file>
-    <file name="temporadaBaja.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\temporadaBaja.ts">
+    <file name="temporadaBaja.ts" path="/home/cabeza/tp_drivehub/src/temporadaBaja.ts">
       <metrics statements="23" coveredstatements="23" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -1316,7 +1316,7 @@
       <line num="22" count="3" type="stmt"/>
       <line num="23" count="1" type="stmt"/>
     </file>
-    <file name="temporadaMedia.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\temporadaMedia.ts">
+    <file name="temporadaMedia.ts" path="/home/cabeza/tp_drivehub/src/temporadaMedia.ts">
       <metrics statements="22" coveredstatements="22" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -1341,7 +1341,7 @@
       <line num="21" count="3" type="stmt"/>
       <line num="22" count="1" type="stmt"/>
     </file>
-    <file name="vehiculo.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\vehiculo.ts">
+    <file name="vehiculo.ts" path="/home/cabeza/tp_drivehub/src/vehiculo.ts">
       <metrics statements="244" coveredstatements="244" conditionals="22" coveredconditionals="22" methods="22" coveredmethods="22"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -1363,7 +1363,7 @@
       <line num="18" count="1" type="stmt"/>
       <line num="19" count="1" type="stmt"/>
       <line num="20" count="1" type="stmt"/>
-      <line num="21" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="21" count="11" type="cond" truecount="1" falsecount="0"/>
       <line num="22" count="11" type="stmt"/>
       <line num="23" count="11" type="stmt"/>
       <line num="24" count="11" type="stmt"/>
@@ -1588,8 +1588,8 @@
       <line num="243" count="11" type="stmt"/>
       <line num="244" count="11" type="stmt"/>
     </file>
-    <file name="verificadorDisponibilidad.ts" path="C:\Users\ludmi\OneDrive\Escritorio\PROGRAMACION II\TP GRUPAL\src\verificadorDisponibilidad.ts">
-      <metrics statements="74" coveredstatements="40" conditionals="9" coveredconditionals="8" methods="4" coveredmethods="3"/>
+    <file name="verificadorDisponibilidad.ts" path="/home/cabeza/tp_drivehub/src/verificadorDisponibilidad.ts">
+      <metrics statements="74" coveredstatements="39" conditionals="9" coveredconditionals="8" methods="4" coveredmethods="3"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
@@ -1603,7 +1603,7 @@
       <line num="11" count="1" type="stmt"/>
       <line num="12" count="1" type="stmt"/>
       <line num="13" count="1" type="stmt"/>
-      <line num="14" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
       <line num="15" count="0" type="stmt"/>
       <line num="16" count="0" type="stmt"/>
       <line num="17" count="0" type="stmt"/>

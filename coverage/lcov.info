@@ -1,5 +1,5 @@
 TN:
-SF:src\calculadoraDuracion.ts
+SF:src/calculadoraDuracion.ts
 FN:21,calcularDuracionEnDias
 FN:40,calcularDuracionEnMeses
 FNF:2
@@ -60,7 +60,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\cliente.ts
+SF:src/cliente.ts
 FN:5,<instance_members_initializer>
 FN:15,Cliente
 FN:26,getID
@@ -75,7 +75,7 @@ DA:1,1
 DA:2,1
 DA:3,1
 DA:4,1
-DA:5,1
+DA:5,7
 DA:6,7
 DA:7,7
 DA:8,7
@@ -120,7 +120,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:src\compacto.ts
+SF:src/compacto.ts
 FN:23,Compacto
 FN:48,calcularCostoFinal
 FNF:2
@@ -204,7 +204,7 @@ BRF:3
 BRH:3
 end_of_record
 TN:
-SF:src\estadoDisponible.ts
+SF:src/estadoDisponible.ts
 FN:18,<instance_members_initializer>
 FN:28,setContexto
 FN:37,getNombre
@@ -244,7 +244,7 @@ DA:14,1
 DA:15,1
 DA:16,1
 DA:17,1
-DA:18,1
+DA:18,0
 DA:19,0
 DA:20,0
 DA:21,0
@@ -331,7 +331,7 @@ DA:101,1
 DA:102,1
 DA:103,0
 LF:103
-LH:36
+LH:35
 BRDA:18,0,0,0
 BRDA:28,1,0,11
 BRDA:37,2,0,1
@@ -346,7 +346,7 @@ BRF:10
 BRH:9
 end_of_record
 TN:
-SF:src\estadoEnAlquiler.ts
+SF:src/estadoEnAlquiler.ts
 FN:16,<instance_members_initializer>
 FN:26,setContexto
 FN:35,getNombre
@@ -384,7 +384,7 @@ DA:12,1
 DA:13,1
 DA:14,1
 DA:15,1
-DA:16,1
+DA:16,0
 DA:17,0
 DA:18,0
 DA:19,0
@@ -476,7 +476,7 @@ DA:104,1
 DA:105,1
 DA:106,0
 LF:106
-LH:34
+LH:33
 BRDA:16,0,0,0
 BRDA:26,1,0,8
 BRDA:35,2,0,1
@@ -491,7 +491,7 @@ BRF:10
 BRH:9
 end_of_record
 TN:
-SF:src\estadoEnMantenimiento.ts
+SF:src/estadoEnMantenimiento.ts
 FN:16,<instance_members_initializer>
 FN:25,setContexto
 FN:34,getNombre
@@ -529,7 +529,7 @@ DA:12,1
 DA:13,1
 DA:14,1
 DA:15,1
-DA:16,1
+DA:16,0
 DA:17,0
 DA:18,0
 DA:19,0
@@ -617,7 +617,7 @@ DA:100,1
 DA:101,1
 DA:102,0
 LF:102
-LH:34
+LH:33
 BRDA:16,0,0,0
 BRDA:25,1,0,8
 BRDA:34,2,0,1
@@ -632,7 +632,7 @@ BRF:10
 BRH:9
 end_of_record
 TN:
-SF:src\generadorReportes.ts
+SF:src/generadorReportes.ts
 FN:18,<instance_members_initializer>
 FN:29,GeneradorReportes
 FN:49,vehiculosMasYMenosAlquilados
@@ -662,7 +662,7 @@ DA:14,1
 DA:15,1
 DA:16,1
 DA:17,1
-DA:18,1
+DA:18,5
 DA:19,5
 DA:20,5
 DA:21,5
@@ -820,7 +820,7 @@ BRF:10
 BRH:10
 end_of_record
 TN:
-SF:src\repositorioReservas.ts
+SF:src/repositorioReservas.ts
 FN:16,<instance_members_initializer>
 FN:25,RepositorioReservas
 FN:39,agregarReserva
@@ -854,7 +854,7 @@ DA:12,1
 DA:13,1
 DA:14,1
 DA:15,1
-DA:16,1
+DA:16,11
 DA:17,11
 DA:18,11
 DA:19,11
@@ -994,7 +994,7 @@ BRF:13
 BRH:13
 end_of_record
 TN:
-SF:src\repositorioVehiculos.ts
+SF:src/repositorioVehiculos.ts
 FN:11,<instance_members_initializer>
 FN:18,RepositorioVehiculos
 FN:30,agregarVehiculo
@@ -1019,7 +1019,7 @@ DA:7,1
 DA:8,1
 DA:9,1
 DA:10,1
-DA:11,1
+DA:11,6
 DA:12,6
 DA:13,6
 DA:14,6
@@ -1089,7 +1089,7 @@ BRF:7
 BRH:7
 end_of_record
 TN:
-SF:src\reserva.ts
+SF:src/reserva.ts
 FN:20,<instance_members_initializer>
 FN:39,Reserva
 FN:60,getId
@@ -1127,7 +1127,7 @@ DA:16,1
 DA:17,1
 DA:18,1
 DA:19,1
-DA:20,1
+DA:20,0
 DA:21,0
 DA:22,0
 DA:23,0
@@ -1217,7 +1217,7 @@ DA:106,1
 DA:107,1
 DA:108,0
 LF:108
-LH:46
+LH:45
 BRDA:20,0,0,0
 BRDA:39,1,0,7
 BRDA:60,2,0,1
@@ -1230,7 +1230,7 @@ BRF:8
 BRH:7
 end_of_record
 TN:
-SF:src\sedan.ts
+SF:src/sedan.ts
 FN:22,Sedan
 FN:43,calcularCostoFinal
 FNF:2
@@ -1308,7 +1308,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\sistemaDeAlquiler.ts
+SF:src/sistemaDeAlquiler.ts
 FN:21,<instance_members_initializer>
 FN:32,SistemaDeAlquiler
 FN:49,agregarVehiculo
@@ -1341,7 +1341,7 @@ DA:17,1
 DA:18,1
 DA:19,1
 DA:20,1
-DA:21,1
+DA:21,5
 DA:22,5
 DA:23,5
 DA:24,5
@@ -1490,7 +1490,7 @@ BRF:9
 BRH:9
 end_of_record
 TN:
-SF:src\suv.ts
+SF:src/suv.ts
 FN:19,<instance_members_initializer>
 FN:31,Suv
 FN:52,calcularCostoFinal
@@ -1517,7 +1517,7 @@ DA:15,1
 DA:16,1
 DA:17,1
 DA:18,1
-DA:19,1
+DA:19,11
 DA:20,11
 DA:21,11
 DA:22,11
@@ -1582,7 +1582,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:src\temporadaAlta.ts
+SF:src/temporadaAlta.ts
 FN:19,obtenerFactorAjuste
 FNF:1
 FNH:1
@@ -1616,7 +1616,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src\temporadaBaja.ts
+SF:src/temporadaBaja.ts
 FN:20,obtenerFactorAjuste
 FNF:1
 FNH:1
@@ -1651,7 +1651,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src\temporadaMedia.ts
+SF:src/temporadaMedia.ts
 FN:19,obtenerFactorAjuste
 FNF:1
 FNH:1
@@ -1685,7 +1685,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src\vehiculo.ts
+SF:src/vehiculo.ts
 FN:21,<instance_members_initializer>
 FN:60,Vehiculo
 FN:92,necesitaMantenimientoPorAlquileres
@@ -1752,7 +1752,7 @@ DA:17,1
 DA:18,1
 DA:19,1
 DA:20,1
-DA:21,1
+DA:21,11
 DA:22,11
 DA:23,11
 DA:24,11
@@ -2004,7 +2004,7 @@ BRF:22
 BRH:22
 end_of_record
 TN:
-SF:src\verificadorDisponibilidad.ts
+SF:src/verificadorDisponibilidad.ts
 FN:14,<instance_members_initializer>
 FN:24,VerificadorDisponibilidad
 FN:41,estaDisponible
@@ -2028,7 +2028,7 @@ DA:10,1
 DA:11,1
 DA:12,1
 DA:13,1
-DA:14,1
+DA:14,0
 DA:15,0
 DA:16,0
 DA:17,0
@@ -2090,7 +2090,7 @@ DA:72,5
 DA:73,5
 DA:74,0
 LF:74
-LH:40
+LH:39
 BRDA:14,0,0,0
 BRDA:24,1,0,5
 BRDA:41,2,0,5

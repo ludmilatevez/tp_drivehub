@@ -2,63 +2,237 @@
 
 title DriveHub
 
-class Vehiculo{
-    #numeroMatricula:string
-    #estado:string
+abstract class Vehiculo {
+    #numeroMatricula: string
+    #estado: IVehiculoEstado
     #tarifaBase:number
     #cargo:number
-    
+    #costoDeMantenimiento: number
+    #kmDesdeElUltimoMantenimiento: number
+    #fechaUltimoMantenimiento: Date
+    #alquileresCompletadosTotales: number
+    #alquileresParaMantenimiento: number
+    #rentabilidad: number
+
     +getNumeroMatricula(): string
     +setEstado(estado: string)
-    +getEstado(): string
-    +abstract calcularCostoFinal(kilometrajeDiario:number,diasReservados:number):number
+    +getEstado(): string    
+    +necesitaMantenimientoPorAlquileres(): boolean
+    +necesitaMantenimientoPorKm(): boolean
+    +necesitaMantenimientoPorTiempo(fechaFinAlquiler: Date): boolean
+    +getCostoMantenimiento(): number
+    +getRentabilidad(): number
+    +disminuirRentabilidad(costoMantenimiento: number): void
+    +aumentarRentabilidad(ingresoPorAlquiler: number): void
+    +incrementarAlquileres(): void
+    +actualizarKilometros(totalKilometrosRecorridos: number): void 
+    +getKmDesdeElUltimoMantenimiento(): number
+    +getFechaUltimoMantenimiento(): Date
+    +getAlquileresCompletados(): number
+    +getCantidadTotalAlquileres(): number
+    +estaEnAlquiler(): boolean
+    +estaDisponible(): boolean
+    +estaEnMantenimiento(): boolean
+    +intentarAlquilar(): void
+    +intentarDevolver(): void
+    +abstract calcularCostoFinal(
+        kilometrajeTotal: number,
+        diasReservados: number,
+        temporada: ITemporada
+    ): number
+
 }
 class Compacto extends Vehiculo{
-    +calcularCostoFinal(kilometrajeDiario:number,diasReservados:number):number
+    +calcularCostoFinal(kilometrajeTotal: number,
+        diasReservados: number,
+        temporada: ITemporada
+    ): number
 }
 class Sedan extends Vehiculo{
-    +calcularCostoFinal(kilometrajeDiario: number, diasReservados: number): number
+    +calcularCostoFinal(kilometrajeTotal: number,
+        diasReservados: number,
+        temporada: ITemporada
+    ): number
 }
 class Suv extends Vehiculo{
     -cargoPorSeguro: number
 
-    +calcularCostoFinal(kilometrajeDiario: number, diasReservados: number): number
+    +calcularCostoFinal(kilometrajeTotal: number,
+        diasReservados: number,
+        temporada: ITemporada
+    ): number 
 }
 
 class Cliente{
-    #nombre
-    +settersGetters()
+    -id: number
+    -nombre: string
+
+    +getID(): number
+    +getNombre(): string
 }
 
 class Reserva
 {
-
+    -id: number
     -cliente:Cliente
     -vehiculo:Vehiculo
     -fechaInicio:Date
     -fechaFin:Date
+    -temporada: ITemporada
 
+    +getId(): number
     +getFechaInicio():Date
     +getFechaFin():Date
     +getVehiculo():Vehiculo
     +getCliente():Cliente
+    +getTemporada(): ITemporada
 }
 
-class sistemaDeAlquiler{
-    -vehiculos:Vehiculo[]
-    -reservas:Reserva[]
+class SistemaDeAlquiler{
+    -repositorioVehiculos: RepositorioVehiculos
+    -repositorioReservas: RepositorioReservas
+    -verificadorDisponibilidad: VerificadorDisponibilidad
 
-    +agregarVehiculo(vehiculo:Vehiculo)
-    +crearReserva(cliente: Cliente, vehiculo: Vehiculo, fechaInicio: Date, fechaFin: Date)
-    +entregarVehiculo(reserva: Reserva, kilometrajeDiario: number)
-    -estaDisponible(vehiculo: Vehiculo, fechaInicio: Date, fechaFin: Date): boolean
+    +agregarVehiculo(vehiculo: Vehiculo)
+    +crearReserva(cliente: Cliente, vehiculo: Vehiculo, fechaInicio: Date, fechaFin: Date, temporada: ITemporada)
+    +entregarVehiculo(reserva: Reserva, kilometrajeTotal: number)    
+}
+
+ class CalculadoraDuracion {
+    +static calcularDuracionEnDias(fechaInicio: Date, fechaFin: Date): number 
+    +static calcularDuracionEnMeses(fechaInicio: Date, fechaFin: Date): number  
+ }
+
+ interface IVehiculoEstado {
+    +alquilar(): void
+    +devolver(): void
+    +iniciarMantenimiento(): void
+    +finalizarMantenimiento(): void
+    +getNombre(): string
+    +estaDisponible(): boolean
+    +estaEnAlquiler(): boolean
+    +estaEnMantenimiento(): boolean
+    +setContexto(vehiculo: Vehiculo): void
+ }
+
+class EstadoDisponible implements IVehiculoEstado {
+    -vehiculo: Vehiculo
+
+    +setContexto(vehiculo: Vehiculo): void 
+    +getNombre(): string
+    +alquilar(): void
+    +devolver(): void
+    +iniciarMantenimiento(): void 
+    +finalizarMantenimiento(): void
+    +estaDisponible(): boolean
+    +estaEnAlquiler(): boolean
+    +estaEnMantenimiento(): boolean
+}
+class EstadoEnAlquiler implements IVehiculoEstado {
+    -vehiculo: Vehiculo
+
+    +setContexto(vehiculo: Vehiculo): void 
+    +getNombre(): string
+    +alquilar(): void
+    +devolver(): void
+    +iniciarMantenimiento(): void 
+    +finalizarMantenimiento(): void
+    +estaDisponible(): boolean
+    +estaEnAlquiler(): boolean
+    +estaEnMantenimiento(): boolean
+}
+
+class EstadoEnMantenimiento implements IVehiculoEstado {
+    -vehiculo: Vehiculo
+
+    +setContexto(vehiculo: Vehiculo): void 
+    +getNombre(): string
+    +alquilar(): void
+    +devolver(): void
+    +iniciarMantenimiento(): void 
+    +finalizarMantenimiento(): void
+    +estaDisponible(): boolean
+    +estaEnAlquiler(): boolean
+    +estaEnMantenimiento(): boolean
+}
+
+class GeneradorReportes {
+    -repositorioVehiculos: RepositorioVehiculos
+    -repositorioReservas: RepositorioReservas
+
+    +vehiculosMasYMenosAlquilados(fechaInicio: Date, fechaFin: Date): void
+    +vehiculosConMasYMenosRentabilidad(): void
+    +calcularOcupacionDeFlota(): void 
+
+}
+
+interface ITemporada {
+    +obtenerFactorAjuste(): number
+}
+
+class TemporadaAlta implements ITemporada {
+    +obtenerFactorAjuste(): number
+}
+
+class TemporadaMedia implements ITemporada {
+    +obtenerFactorAjuste(): number
+}
+
+class TemporadaBaja implements ITemporada {
+    +obtenerFactorAjuste(): number
+}
+
+class RepositorioReservas {
+    -reservas: Map<number, Reserva>
+    -historialReservas: Map<number, Reserva>
+    -siguienteId: number
+
+    +agregarReserva(
+        cliente: Cliente,
+        vehiculo: Vehiculo,
+        fechaInicio: Date,
+        fechaFin: Date,
+        temporada: ITemporada
+    ): void
+    +eliminarReserva(reserva: Reserva): void
+    +obtenerReservaPorId(id: number): Reserva | undefined 
+    +obtenerReservasEnConflicto(fechaInicio: Date, fechaFin: Date): Array<Reserva> 
+    +obtenerReservasPorPeriodo(fechaInicio: Date, fechaFin: Date): Array<Reserva> 
+    +obtenerTodas(): Array<Reserva> 
+}
+
+class RepositorioVehiculos {
+   -vehiculos: Map<string, Vehiculo>
+
+   +agregarVehiculo(vehiculo: Vehiculo): void
+   +obtenerPorMatricula(matricula: string): Vehiculo | undefined 
+   +obtenerTodos(): Array<Vehiculo> 
+   +eliminarPorMatricula(matricula: string): void    
+}
+
+class VerificadorDisponibilidad {
+    -repositorioVehiculos: RepositorioVehiculos
+    -repositorioReservas: RepositorioReservas
+
+    +estaDisponible(vehiculo: Vehiculo, fechainicio: Date, fechaFin: Date): boolean 
     -verificarAutoDisponible(vehiculo: Vehiculo): boolean
-    -verificarHorarioDisponible(fechaInicio: Date, fechaFin: Date): boolean 
-    -calcularDuracionEnDias(fechaInicio: Date, fechaFin: Date)
-    -eliminarReserva(reserva: Reserva)
+
 }
 
-sistemaDeAlquiler *-- Vehiculo
-sistemaDeAlquiler *-- Cliente 
-sistemaDeAlquiler *-- Reserva
+SistemaDeAlquiler *-- RepositorioVehiculos
+SistemaDeAlquiler *-- RepositorioReservas 
+SistemaDeAlquiler --> VerificadorDisponibilidad
+SistemaDeAlquiler --> CalculadoraDuracion
+Vehiculo *-- IVehiculoEstado
+Vehiculo --> CalculadoraDuracion
+Reserva *-- Cliente
+Reserva *-- Vehiculo
+Reserva *-- ITemporada
+GeneradorReportes *-l- RepositorioVehiculos
+GeneradorReportes *-r- RepositorioReservas
+RepositorioReservas *-- Reserva
+RepositorioVehiculos *-- Vehiculo
+VerificadorDisponibilidad *-- RepositorioVehiculos
+VerificadorDisponibilidad *-- RepositorioReservas
+
 @enduml

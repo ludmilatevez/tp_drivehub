@@ -1,277 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="120" failures="0" errors="0" time="11.217">
-  <testsuite name="SistemaDeAlquiler" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:23" time="3.263" tests="5">
-    <testcase classname="SistemaDeAlquiler agregarVehiculo debería agregar un vehículo al repositorio debería agregar un vehículo al repositorio" name="SistemaDeAlquiler agregarVehiculo debería agregar un vehículo al repositorio debería agregar un vehículo al repositorio" time="0.005">
+<testsuites name="jest tests" tests="120" failures="0" errors="0" time="55.46">
+  <testsuite name="SistemaDeAlquiler" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:14:21" time="16.82" tests="5">
+    <testcase classname="SistemaDeAlquiler agregarVehiculo debería agregar un vehículo al repositorio debería agregar un vehículo al repositorio" name="SistemaDeAlquiler agregarVehiculo debería agregar un vehículo al repositorio debería agregar un vehículo al repositorio" time="0.034">
     </testcase>
-    <testcase classname="SistemaDeAlquiler crearReserva debería crear una reserva si el vehículo está disponible debería crear una reserva si el vehículo está disponible" name="SistemaDeAlquiler crearReserva debería crear una reserva si el vehículo está disponible debería crear una reserva si el vehículo está disponible" time="0.003">
+    <testcase classname="SistemaDeAlquiler crearReserva debería crear una reserva si el vehículo está disponible debería crear una reserva si el vehículo está disponible" name="SistemaDeAlquiler crearReserva debería crear una reserva si el vehículo está disponible debería crear una reserva si el vehículo está disponible" time="0.012">
     </testcase>
-    <testcase classname="SistemaDeAlquiler crearReserva debería lanzar un error si el vehículo no está disponible debería lanzar un error si el vehículo no está disponible" name="SistemaDeAlquiler crearReserva debería lanzar un error si el vehículo no está disponible debería lanzar un error si el vehículo no está disponible" time="0.001">
+    <testcase classname="SistemaDeAlquiler crearReserva debería lanzar un error si el vehículo no está disponible debería lanzar un error si el vehículo no está disponible" name="SistemaDeAlquiler crearReserva debería lanzar un error si el vehículo no está disponible debería lanzar un error si el vehículo no está disponible" time="0.01">
     </testcase>
-    <testcase classname="SistemaDeAlquiler entregarVehiculo debería procesar correctamente la entrega de un vehículo sin mantenimiento debería procesar correctamente la entrega de un vehículo sin mantenimiento" name="SistemaDeAlquiler entregarVehiculo debería procesar correctamente la entrega de un vehículo sin mantenimiento debería procesar correctamente la entrega de un vehículo sin mantenimiento" time="0.001">
+    <testcase classname="SistemaDeAlquiler entregarVehiculo debería procesar correctamente la entrega de un vehículo sin mantenimiento debería procesar correctamente la entrega de un vehículo sin mantenimiento" name="SistemaDeAlquiler entregarVehiculo debería procesar correctamente la entrega de un vehículo sin mantenimiento debería procesar correctamente la entrega de un vehículo sin mantenimiento" time="0.027">
     </testcase>
-    <testcase classname="SistemaDeAlquiler entregarVehiculo debería aplicar mantenimiento si el vehículo lo necesita debería aplicar mantenimiento si el vehículo lo necesita" name="SistemaDeAlquiler entregarVehiculo debería aplicar mantenimiento si el vehículo lo necesita debería aplicar mantenimiento si el vehículo lo necesita" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="RepositorioReservas" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:26" time="0.516" tests="11">
-    <testcase classname="RepositorioReservas Inicialización debería iniciar con los listados vacíos y siguienteId en 1 debería iniciar con los listados vacíos y siguienteId en 1" name="RepositorioReservas Inicialización debería iniciar con los listados vacíos y siguienteId en 1 debería iniciar con los listados vacíos y siguienteId en 1" time="0.002">
-    </testcase>
-    <testcase classname="RepositorioReservas Agregar reservas debería agregar una reserva correctamente y aumentar el ID debería agregar una reserva correctamente y aumentar el ID" name="RepositorioReservas Agregar reservas debería agregar una reserva correctamente y aumentar el ID debería agregar una reserva correctamente y aumentar el ID" time="0.002">
-    </testcase>
-    <testcase classname="RepositorioReservas Eliminar reservas debería eliminar una reserva existente correctamente debería eliminar una reserva existente correctamente" name="RepositorioReservas Eliminar reservas debería eliminar una reserva existente correctamente debería eliminar una reserva existente correctamente" time="0.001">
-    </testcase>
-    <testcase classname="RepositorioReservas Eliminar reservas debería lanzar error si intenta eliminar una reserva inexistente debería lanzar error si intenta eliminar una reserva inexistente" name="RepositorioReservas Eliminar reservas debería lanzar error si intenta eliminar una reserva inexistente debería lanzar error si intenta eliminar una reserva inexistente" time="0.006">
-    </testcase>
-    <testcase classname="RepositorioReservas Obtener reserva por ID debería devolver la reserva correspondiente debería devolver la reserva correspondiente" name="RepositorioReservas Obtener reserva por ID debería devolver la reserva correspondiente debería devolver la reserva correspondiente" time="0.002">
-    </testcase>
-    <testcase classname="RepositorioReservas Obtener reserva por ID debería devolver undefined si no existe la reserva debería devolver undefined si no existe la reserva" name="RepositorioReservas Obtener reserva por ID debería devolver undefined si no existe la reserva debería devolver undefined si no existe la reserva" time="0.001">
-    </testcase>
-    <testcase classname="RepositorioReservas Obtener reservas en conflicto debería devolver reservas en conflicto de fechas debería devolver reservas en conflicto de fechas" name="RepositorioReservas Obtener reservas en conflicto debería devolver reservas en conflicto de fechas debería devolver reservas en conflicto de fechas" time="0.001">
-    </testcase>
-    <testcase classname="RepositorioReservas Obtener reservas en conflicto debería devolver vacío si no hay conflicto debería devolver vacío si no hay conflicto" name="RepositorioReservas Obtener reservas en conflicto debería devolver vacío si no hay conflicto debería devolver vacío si no hay conflicto" time="0.002">
-    </testcase>
-    <testcase classname="RepositorioReservas Obtener reservas por periodo debería devolver las reservas dentro del periodo indicado debería devolver las reservas dentro del periodo indicado" name="RepositorioReservas Obtener reservas por periodo debería devolver las reservas dentro del periodo indicado debería devolver las reservas dentro del periodo indicado" time="0.009">
-    </testcase>
-    <testcase classname="RepositorioReservas Obtener reservas por periodo debería devolver vacío si ninguna reserva cae en el periodo debería devolver vacío si ninguna reserva cae en el periodo" name="RepositorioReservas Obtener reservas por periodo debería devolver vacío si ninguna reserva cae en el periodo debería devolver vacío si ninguna reserva cae en el periodo" time="0.005">
-    </testcase>
-    <testcase classname="RepositorioReservas Obtener todas las reservas debería devolver todas las reservas activas debería devolver todas las reservas activas" name="RepositorioReservas Obtener todas las reservas debería devolver todas las reservas activas debería devolver todas las reservas activas" time="0.001">
+    <testcase classname="SistemaDeAlquiler entregarVehiculo debería aplicar mantenimiento si el vehículo lo necesita debería aplicar mantenimiento si el vehículo lo necesita" name="SistemaDeAlquiler entregarVehiculo debería aplicar mantenimiento si el vehículo lo necesita debería aplicar mantenimiento si el vehículo lo necesita" time="0.04">
     </testcase>
   </testsuite>
-  <testsuite name="Sedan" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:27" time="0.511" tests="11">
-    <testcase classname="Sedan Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" name="Sedan Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" time="0.002">
+  <testsuite name="RepositorioReservas" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:14:38" time="2.647" tests="11">
+    <testcase classname="RepositorioReservas Inicialización debería iniciar con los listados vacíos y siguienteId en 1 debería iniciar con los listados vacíos y siguienteId en 1" name="RepositorioReservas Inicialización debería iniciar con los listados vacíos y siguienteId en 1 debería iniciar con los listados vacíos y siguienteId en 1" time="0.03">
     </testcase>
-    <testcase classname="Sedan Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" name="Sedan Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" time="0.002">
+    <testcase classname="RepositorioReservas Agregar reservas debería agregar una reserva correctamente y aumentar el ID debería agregar una reserva correctamente y aumentar el ID" name="RepositorioReservas Agregar reservas debería agregar una reserva correctamente y aumentar el ID debería agregar una reserva correctamente y aumentar el ID" time="0.021">
     </testcase>
-    <testcase classname="Sedan Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" name="Sedan Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" time="0.002">
+    <testcase classname="RepositorioReservas Eliminar reservas debería eliminar una reserva existente correctamente debería eliminar una reserva existente correctamente" name="RepositorioReservas Eliminar reservas debería eliminar una reserva existente correctamente debería eliminar una reserva existente correctamente" time="0.027">
     </testcase>
-    <testcase classname="Sedan Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" name="Sedan Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" time="0.01">
+    <testcase classname="RepositorioReservas Eliminar reservas debería lanzar error si intenta eliminar una reserva inexistente debería lanzar error si intenta eliminar una reserva inexistente" name="RepositorioReservas Eliminar reservas debería lanzar error si intenta eliminar una reserva inexistente debería lanzar error si intenta eliminar una reserva inexistente" time="0.026">
     </testcase>
-    <testcase classname="Sedan Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" name="Sedan Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" time="0.002">
+    <testcase classname="RepositorioReservas Obtener reserva por ID debería devolver la reserva correspondiente debería devolver la reserva correspondiente" name="RepositorioReservas Obtener reserva por ID debería devolver la reserva correspondiente debería devolver la reserva correspondiente" time="0.012">
     </testcase>
-    <testcase classname="Sedan Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" name="Sedan Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" time="0.001">
+    <testcase classname="RepositorioReservas Obtener reserva por ID debería devolver undefined si no existe la reserva debería devolver undefined si no existe la reserva" name="RepositorioReservas Obtener reserva por ID debería devolver undefined si no existe la reserva debería devolver undefined si no existe la reserva" time="0.012">
     </testcase>
-    <testcase classname="Sedan Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" name="Sedan Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" time="0.001">
+    <testcase classname="RepositorioReservas Obtener reservas en conflicto debería devolver reservas en conflicto de fechas debería devolver reservas en conflicto de fechas" name="RepositorioReservas Obtener reservas en conflicto debería devolver reservas en conflicto de fechas debería devolver reservas en conflicto de fechas" time="0.019">
     </testcase>
-    <testcase classname="Sedan Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" name="Sedan Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" time="0.001">
+    <testcase classname="RepositorioReservas Obtener reservas en conflicto debería devolver vacío si no hay conflicto debería devolver vacío si no hay conflicto" name="RepositorioReservas Obtener reservas en conflicto debería devolver vacío si no hay conflicto debería devolver vacío si no hay conflicto" time="0.012">
     </testcase>
-    <testcase classname="Sedan Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" name="Sedan Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" time="0.001">
+    <testcase classname="RepositorioReservas Obtener reservas por periodo debería devolver las reservas dentro del periodo indicado debería devolver las reservas dentro del periodo indicado" name="RepositorioReservas Obtener reservas por periodo debería devolver las reservas dentro del periodo indicado debería devolver las reservas dentro del periodo indicado" time="0.02">
     </testcase>
-    <testcase classname="Sedan Cálculo de costo final debería calcular correctamente el costo con factor de ajuste 1.0 debería calcular correctamente el costo con factor de ajuste 1.0" name="Sedan Cálculo de costo final debería calcular correctamente el costo con factor de ajuste 1.0 debería calcular correctamente el costo con factor de ajuste 1.0" time="0.001">
+    <testcase classname="RepositorioReservas Obtener reservas por periodo debería devolver vacío si ninguna reserva cae en el periodo debería devolver vacío si ninguna reserva cae en el periodo" name="RepositorioReservas Obtener reservas por periodo debería devolver vacío si ninguna reserva cae en el periodo debería devolver vacío si ninguna reserva cae en el periodo" time="0.026">
     </testcase>
-    <testcase classname="Sedan Cálculo de costo final debería calcular correctamente el costo con factor de ajuste 1.5 debería calcular correctamente el costo con factor de ajuste 1.5" name="Sedan Cálculo de costo final debería calcular correctamente el costo con factor de ajuste 1.5 debería calcular correctamente el costo con factor de ajuste 1.5" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="Compacto" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:27" time="0.513" tests="11">
-    <testcase classname="Compacto Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" name="Compacto Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" time="0.002">
-    </testcase>
-    <testcase classname="Compacto Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" name="Compacto Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" time="0.005">
-    </testcase>
-    <testcase classname="Compacto Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" name="Compacto Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" time="0.002">
-    </testcase>
-    <testcase classname="Compacto Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" name="Compacto Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" time="0.005">
-    </testcase>
-    <testcase classname="Compacto Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" name="Compacto Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" time="0.001">
-    </testcase>
-    <testcase classname="Compacto Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" name="Compacto Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" time="0.002">
-    </testcase>
-    <testcase classname="Compacto Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" name="Compacto Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" time="0.002">
-    </testcase>
-    <testcase classname="Compacto Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" name="Compacto Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" time="0.002">
-    </testcase>
-    <testcase classname="Compacto Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" name="Compacto Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" time="0.004">
-    </testcase>
-    <testcase classname="Compacto Cálculo de costo final debería calcular correctamente el costo sin adicional (menos de 100 km/día) debería calcular correctamente el costo sin adicional (menos de 100 km/día)" name="Compacto Cálculo de costo final debería calcular correctamente el costo sin adicional (menos de 100 km/día) debería calcular correctamente el costo sin adicional (menos de 100 km/día)" time="0.001">
-    </testcase>
-    <testcase classname="Compacto Cálculo de costo final debería calcular correctamente el costo con adicional (más de 100 km/día) debería calcular correctamente el costo con adicional (más de 100 km/día)" name="Compacto Cálculo de costo final debería calcular correctamente el costo con adicional (más de 100 km/día) debería calcular correctamente el costo con adicional (más de 100 km/día)" time="0.001">
+    <testcase classname="RepositorioReservas Obtener todas las reservas debería devolver todas las reservas activas debería devolver todas las reservas activas" name="RepositorioReservas Obtener todas las reservas debería devolver todas las reservas activas debería devolver todas las reservas activas" time="0.02">
     </testcase>
   </testsuite>
-  <testsuite name="Suv" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:28" time="0.566" tests="11">
-    <testcase classname="Suv Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" name="Suv Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" time="0.003">
+  <testsuite name="GeneradorReportes" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:14:41" time="2.42" tests="5">
+    <testcase classname="GeneradorReportes vehiculosMasYMenosAlquilados debería mostrar mensaje si no hay reservas en el periodo debería mostrar mensaje si no hay reservas en el periodo" name="GeneradorReportes vehiculosMasYMenosAlquilados debería mostrar mensaje si no hay reservas en el periodo debería mostrar mensaje si no hay reservas en el periodo" time="0.018">
     </testcase>
-    <testcase classname="Suv Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" name="Suv Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" time="0.001">
+    <testcase classname="GeneradorReportes vehiculosMasYMenosAlquilados debería mostrar correctamente los vehículos más y menos alquilados debería mostrar correctamente los vehículos más y menos alquilados" name="GeneradorReportes vehiculosMasYMenosAlquilados debería mostrar correctamente los vehículos más y menos alquilados debería mostrar correctamente los vehículos más y menos alquilados" time="0.023">
     </testcase>
-    <testcase classname="Suv Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" name="Suv Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" time="0.002">
+    <testcase classname="GeneradorReportes vehiculosConMasYMenosRentabilidad debería mostrar mensaje si no hay vehículos debería mostrar mensaje si no hay vehículos" name="GeneradorReportes vehiculosConMasYMenosRentabilidad debería mostrar mensaje si no hay vehículos debería mostrar mensaje si no hay vehículos" time="0.021">
     </testcase>
-    <testcase classname="Suv Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" name="Suv Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" time="0.002">
+    <testcase classname="GeneradorReportes vehiculosConMasYMenosRentabilidad debería mostrar el vehículo con más y menos rentabilidad debería mostrar el vehículo con más y menos rentabilidad" name="GeneradorReportes vehiculosConMasYMenosRentabilidad debería mostrar el vehículo con más y menos rentabilidad debería mostrar el vehículo con más y menos rentabilidad" time="0.027">
     </testcase>
-    <testcase classname="Suv Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" name="Suv Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" time="0.002">
-    </testcase>
-    <testcase classname="Suv Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" name="Suv Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" time="0.002">
-    </testcase>
-    <testcase classname="Suv Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" name="Suv Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" time="0.003">
-    </testcase>
-    <testcase classname="Suv Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" name="Suv Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" time="0.002">
-    </testcase>
-    <testcase classname="Suv Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" name="Suv Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" time="0.003">
-    </testcase>
-    <testcase classname="Suv Cálculo de costo final debería calcular correctamente el costo sin adicional (≤ 500 km totales) debería calcular correctamente el costo sin adicional (≤ 500 km totales)" name="Suv Cálculo de costo final debería calcular correctamente el costo sin adicional (≤ 500 km totales) debería calcular correctamente el costo sin adicional (≤ 500 km totales)" time="0.002">
-    </testcase>
-    <testcase classname="Suv Cálculo de costo final debería calcular correctamente el costo con adicional (&gt; 500 km totales) debería calcular correctamente el costo con adicional (&gt; 500 km totales)" name="Suv Cálculo de costo final debería calcular correctamente el costo con adicional (&gt; 500 km totales) debería calcular correctamente el costo con adicional (&gt; 500 km totales)" time="0.001">
+    <testcase classname="GeneradorReportes calcularOcupacionDeFlota debería calcular correctamente la ocupación debería calcular correctamente la ocupación" name="GeneradorReportes calcularOcupacionDeFlota debería calcular correctamente la ocupación debería calcular correctamente la ocupación" time="0.015">
     </testcase>
   </testsuite>
-  <testsuite name="Tests de CalculadoraDuracion" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:28" time="0.392" tests="10">
-    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente la duración en días entre dos fechas del mismo mes debería calcular correctamente la duración en días entre dos fechas del mismo mes" name="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente la duración en días entre dos fechas del mismo mes debería calcular correctamente la duración en días entre dos fechas del mismo mes" time="0.001">
+  <testsuite name="Compacto" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:14:43" time="2.794" tests="11">
+    <testcase classname="Compacto Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" name="Compacto Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" time="0.026">
     </testcase>
-    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnDias debería devolver 0 si las fechas son iguales debería devolver 0 si las fechas son iguales" name="Tests de CalculadoraDuracion calcularDuracionEnDias debería devolver 0 si las fechas son iguales debería devolver 0 si las fechas son iguales" time="0.002">
+    <testcase classname="Compacto Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" name="Compacto Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" time="0.014">
     </testcase>
-    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnDias debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin" name="Tests de CalculadoraDuracion calcularDuracionEnDias debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin" time="0.005">
+    <testcase classname="Compacto Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" name="Compacto Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" time="0.009">
     </testcase>
-    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente la diferencia entre meses distintos debería calcular correctamente la diferencia entre meses distintos" name="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente la diferencia entre meses distintos debería calcular correctamente la diferencia entre meses distintos" time="0.001">
+    <testcase classname="Compacto Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" name="Compacto Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" time="0.074">
     </testcase>
-    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente cuando hay cambio de año debería calcular correctamente cuando hay cambio de año" name="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente cuando hay cambio de año debería calcular correctamente cuando hay cambio de año" time="0.001">
+    <testcase classname="Compacto Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" name="Compacto Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" time="0.01">
     </testcase>
-    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnMeses debería calcular correctamente los meses entre dos fechas del mismo año debería calcular correctamente los meses entre dos fechas del mismo año" name="Tests de CalculadoraDuracion calcularDuracionEnMeses debería calcular correctamente los meses entre dos fechas del mismo año debería calcular correctamente los meses entre dos fechas del mismo año" time="0.001">
+    <testcase classname="Compacto Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" name="Compacto Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" time="0.012">
     </testcase>
-    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnMeses debería calcular correctamente los meses entre años distintos debería calcular correctamente los meses entre años distintos" name="Tests de CalculadoraDuracion calcularDuracionEnMeses debería calcular correctamente los meses entre años distintos debería calcular correctamente los meses entre años distintos" time="0.001">
+    <testcase classname="Compacto Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" name="Compacto Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" time="0.012">
     </testcase>
-    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnMeses debería devolver 0 si las fechas son del mismo mes y año debería devolver 0 si las fechas son del mismo mes y año" name="Tests de CalculadoraDuracion calcularDuracionEnMeses debería devolver 0 si las fechas son del mismo mes y año debería devolver 0 si las fechas son del mismo mes y año" time="0.001">
+    <testcase classname="Compacto Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" name="Compacto Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" time="0.009">
     </testcase>
-    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnMeses debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin" name="Tests de CalculadoraDuracion calcularDuracionEnMeses debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin" time="0.001">
+    <testcase classname="Compacto Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" name="Compacto Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" time="0.015">
     </testcase>
-    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnMeses debería manejar correctamente una diferencia de varios años debería manejar correctamente una diferencia de varios años" name="Tests de CalculadoraDuracion calcularDuracionEnMeses debería manejar correctamente una diferencia de varios años debería manejar correctamente una diferencia de varios años" time="0.001">
+    <testcase classname="Compacto Cálculo de costo final debería calcular correctamente el costo sin adicional (menos de 100 km/día) debería calcular correctamente el costo sin adicional (menos de 100 km/día)" name="Compacto Cálculo de costo final debería calcular correctamente el costo sin adicional (menos de 100 km/día) debería calcular correctamente el costo sin adicional (menos de 100 km/día)" time="0.017">
     </testcase>
-  </testsuite>
-  <testsuite name="Tests de Reserva" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:29" time="0.469" tests="7">
-    <testcase classname="Tests de Reserva constructor debería crear una instancia de Reserva correctamente debería crear una instancia de Reserva correctamente" name="Tests de Reserva constructor debería crear una instancia de Reserva correctamente debería crear una instancia de Reserva correctamente" time="0.002">
-    </testcase>
-    <testcase classname="Tests de Reserva getId debería devolver el id correcto debería devolver el id correcto" name="Tests de Reserva getId debería devolver el id correcto debería devolver el id correcto" time="0.002">
-    </testcase>
-    <testcase classname="Tests de Reserva getFechaInicio debería devolver la fecha de inicio correcta debería devolver la fecha de inicio correcta" name="Tests de Reserva getFechaInicio debería devolver la fecha de inicio correcta debería devolver la fecha de inicio correcta" time="0.002">
-    </testcase>
-    <testcase classname="Tests de Reserva getFechaFin debería devolver la fecha de fin correcta debería devolver la fecha de fin correcta" name="Tests de Reserva getFechaFin debería devolver la fecha de fin correcta debería devolver la fecha de fin correcta" time="0.002">
-    </testcase>
-    <testcase classname="Tests de Reserva getVehiculo debería devolver el vehículo correcto debería devolver el vehículo correcto" name="Tests de Reserva getVehiculo debería devolver el vehículo correcto debería devolver el vehículo correcto" time="0.001">
-    </testcase>
-    <testcase classname="Tests de Reserva getCliente debería devolver el cliente correcto debería devolver el cliente correcto" name="Tests de Reserva getCliente debería devolver el cliente correcto debería devolver el cliente correcto" time="0">
-    </testcase>
-    <testcase classname="Tests de Reserva getTemporada debería devolver la temporada correcta debería devolver la temporada correcta" name="Tests de Reserva getTemporada debería devolver la temporada correcta debería devolver la temporada correcta" time="0.004">
+    <testcase classname="Compacto Cálculo de costo final debería calcular correctamente el costo con adicional (más de 100 km/día) debería calcular correctamente el costo con adicional (más de 100 km/día)" name="Compacto Cálculo de costo final debería calcular correctamente el costo con adicional (más de 100 km/día) debería calcular correctamente el costo con adicional (más de 100 km/día)" time="0.011">
     </testcase>
   </testsuite>
-  <testsuite name="EstadoDisponible" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:29" time="0.476" tests="8">
-    <testcase classname="EstadoDisponible transiciones válidas debería cambiar el estado a EstadoEnAlquiler al alquilar debería cambiar el estado a EstadoEnAlquiler al alquilar" name="EstadoDisponible transiciones válidas debería cambiar el estado a EstadoEnAlquiler al alquilar debería cambiar el estado a EstadoEnAlquiler al alquilar" time="0.002">
+  <testsuite name="Suv" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:14:46" time="2.831" tests="11">
+    <testcase classname="Suv Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" name="Suv Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" time="0.02">
     </testcase>
-    <testcase classname="EstadoDisponible transiciones válidas debería cambiar el estado a EstadoEnMantenimiento al iniciar mantenimiento debería cambiar el estado a EstadoEnMantenimiento al iniciar mantenimiento" name="EstadoDisponible transiciones válidas debería cambiar el estado a EstadoEnMantenimiento al iniciar mantenimiento debería cambiar el estado a EstadoEnMantenimiento al iniciar mantenimiento" time="0.002">
+    <testcase classname="Suv Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" name="Suv Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" time="0.009">
     </testcase>
-    <testcase classname="EstadoDisponible operaciones inválidas debería lanzar un error al intentar devolver un vehículo disponible debería lanzar un error al intentar devolver un vehículo disponible" name="EstadoDisponible operaciones inválidas debería lanzar un error al intentar devolver un vehículo disponible debería lanzar un error al intentar devolver un vehículo disponible" time="0.002">
+    <testcase classname="Suv Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" name="Suv Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" time="0.011">
     </testcase>
-    <testcase classname="EstadoDisponible operaciones inválidas debería lanzar un error al intentar finalizar mantenimiento cuando está disponible debería lanzar un error al intentar finalizar mantenimiento cuando está disponible" name="EstadoDisponible operaciones inválidas debería lanzar un error al intentar finalizar mantenimiento cuando está disponible debería lanzar un error al intentar finalizar mantenimiento cuando está disponible" time="0.002">
+    <testcase classname="Suv Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" name="Suv Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" time="0.026">
     </testcase>
-    <testcase classname="EstadoDisponible consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" name="EstadoDisponible consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" time="0.001">
+    <testcase classname="Suv Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" name="Suv Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" time="0.013">
     </testcase>
-    <testcase classname="EstadoDisponible consultas de estado debería indicar que el vehículo está disponible debería indicar que el vehículo está disponible" name="EstadoDisponible consultas de estado debería indicar que el vehículo está disponible debería indicar que el vehículo está disponible" time="0.001">
+    <testcase classname="Suv Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" name="Suv Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" time="0.028">
     </testcase>
-    <testcase classname="EstadoDisponible consultas de estado debería indicar que el vehículo no está en alquiler debería indicar que el vehículo no está en alquiler" name="EstadoDisponible consultas de estado debería indicar que el vehículo no está en alquiler debería indicar que el vehículo no está en alquiler" time="0.001">
+    <testcase classname="Suv Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" name="Suv Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" time="0.016">
     </testcase>
-    <testcase classname="EstadoDisponible consultas de estado debería indicar que el vehículo no está en mantenimiento debería indicar que el vehículo no está en mantenimiento" name="EstadoDisponible consultas de estado debería indicar que el vehículo no está en mantenimiento debería indicar que el vehículo no está en mantenimiento" time="0.001">
+    <testcase classname="Suv Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" name="Suv Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" time="0.023">
     </testcase>
-  </testsuite>
-  <testsuite name="GeneradorReportes" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:30" time="0.661" tests="5">
-    <testcase classname="GeneradorReportes vehiculosMasYMenosAlquilados debería mostrar mensaje si no hay reservas en el periodo debería mostrar mensaje si no hay reservas en el periodo" name="GeneradorReportes vehiculosMasYMenosAlquilados debería mostrar mensaje si no hay reservas en el periodo debería mostrar mensaje si no hay reservas en el periodo" time="0.002">
+    <testcase classname="Suv Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" name="Suv Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" time="0.069">
     </testcase>
-    <testcase classname="GeneradorReportes vehiculosMasYMenosAlquilados debería mostrar correctamente los vehículos más y menos alquilados debería mostrar correctamente los vehículos más y menos alquilados" name="GeneradorReportes vehiculosMasYMenosAlquilados debería mostrar correctamente los vehículos más y menos alquilados debería mostrar correctamente los vehículos más y menos alquilados" time="0.002">
+    <testcase classname="Suv Cálculo de costo final debería calcular correctamente el costo sin adicional (≤ 500 km totales) debería calcular correctamente el costo sin adicional (≤ 500 km totales)" name="Suv Cálculo de costo final debería calcular correctamente el costo sin adicional (≤ 500 km totales) debería calcular correctamente el costo sin adicional (≤ 500 km totales)" time="0.016">
     </testcase>
-    <testcase classname="GeneradorReportes vehiculosConMasYMenosRentabilidad debería mostrar mensaje si no hay vehículos debería mostrar mensaje si no hay vehículos" name="GeneradorReportes vehiculosConMasYMenosRentabilidad debería mostrar mensaje si no hay vehículos debería mostrar mensaje si no hay vehículos" time="0.002">
-    </testcase>
-    <testcase classname="GeneradorReportes vehiculosConMasYMenosRentabilidad debería mostrar el vehículo con más y menos rentabilidad debería mostrar el vehículo con más y menos rentabilidad" name="GeneradorReportes vehiculosConMasYMenosRentabilidad debería mostrar el vehículo con más y menos rentabilidad debería mostrar el vehículo con más y menos rentabilidad" time="0.002">
-    </testcase>
-    <testcase classname="GeneradorReportes calcularOcupacionDeFlota debería calcular correctamente la ocupación debería calcular correctamente la ocupación" name="GeneradorReportes calcularOcupacionDeFlota debería calcular correctamente la ocupación debería calcular correctamente la ocupación" time="0.001">
+    <testcase classname="Suv Cálculo de costo final debería calcular correctamente el costo con adicional (&gt; 500 km totales) debería calcular correctamente el costo con adicional (&gt; 500 km totales)" name="Suv Cálculo de costo final debería calcular correctamente el costo con adicional (&gt; 500 km totales) debería calcular correctamente el costo con adicional (&gt; 500 km totales)" time="0.027">
     </testcase>
   </testsuite>
-  <testsuite name="EstadoEnMantenimiento" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:30" time="0.457" tests="8">
-    <testcase classname="EstadoEnMantenimiento transiciones válidas debería cambiar el estado a EstadoDisponible al finalizar mantenimiento debería cambiar el estado a EstadoDisponible al finalizar mantenimiento" name="EstadoEnMantenimiento transiciones válidas debería cambiar el estado a EstadoDisponible al finalizar mantenimiento debería cambiar el estado a EstadoDisponible al finalizar mantenimiento" time="0.004">
+  <testsuite name="Sedan" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:14:49" time="2.724" tests="11">
+    <testcase classname="Sedan Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" name="Sedan Inicialización debería crear un vehículo con los valores iniciales correctos debería crear un vehículo con los valores iniciales correctos" time="0.018">
     </testcase>
-    <testcase classname="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar alquilar un vehículo en mantenimiento debería lanzar un error al intentar alquilar un vehículo en mantenimiento" name="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar alquilar un vehículo en mantenimiento debería lanzar un error al intentar alquilar un vehículo en mantenimiento" time="0.002">
+    <testcase classname="Sedan Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" name="Sedan Gestión de rentabilidad debería aumentar la rentabilidad correctamente debería aumentar la rentabilidad correctamente" time="0.007">
     </testcase>
-    <testcase classname="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar devolver un vehículo en mantenimiento debería lanzar un error al intentar devolver un vehículo en mantenimiento" name="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar devolver un vehículo en mantenimiento debería lanzar un error al intentar devolver un vehículo en mantenimiento" time="0.002">
+    <testcase classname="Sedan Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" name="Sedan Gestión de rentabilidad debería disminuir la rentabilidad correctamente debería disminuir la rentabilidad correctamente" time="0.007">
     </testcase>
-    <testcase classname="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar iniciar mantenimiento nuevamente debería lanzar un error al intentar iniciar mantenimiento nuevamente" name="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar iniciar mantenimiento nuevamente debería lanzar un error al intentar iniciar mantenimiento nuevamente" time="0">
+    <testcase classname="Sedan Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" name="Sedan Gestión de mantenimiento debería requerir mantenimiento luego de 5 alquileres debería requerir mantenimiento luego de 5 alquileres" time="0.018">
     </testcase>
-    <testcase classname="EstadoEnMantenimiento consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" name="EstadoEnMantenimiento consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" time="0.001">
+    <testcase classname="Sedan Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" name="Sedan Gestión de mantenimiento debería requerir mantenimiento por km luego de superar 10000 debería requerir mantenimiento por km luego de superar 10000" time="0.009">
     </testcase>
-    <testcase classname="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo no está disponible debería indicar que el vehículo no está disponible" name="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo no está disponible debería indicar que el vehículo no está disponible" time="0.001">
+    <testcase classname="Sedan Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" name="Sedan Gestión de mantenimiento debería requerir mantenimiento por tiempo luego de 12 meses debería requerir mantenimiento por tiempo luego de 12 meses" time="0.012">
     </testcase>
-    <testcase classname="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo no está en alquiler debería indicar que el vehículo no está en alquiler" name="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo no está en alquiler debería indicar que el vehículo no está en alquiler" time="0.001">
+    <testcase classname="Sedan Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" name="Sedan Gestión de estado debería poder cambiar de estado correctamente debería poder cambiar de estado correctamente" time="0.015">
     </testcase>
-    <testcase classname="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo está en mantenimiento debería indicar que el vehículo está en mantenimiento" name="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo está en mantenimiento debería indicar que el vehículo está en mantenimiento" time="0.001">
+    <testcase classname="Sedan Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" name="Sedan Gestión de estado debería delegar en el estado actual al intentar alquilar debería delegar en el estado actual al intentar alquilar" time="0.013">
     </testcase>
-  </testsuite>
-  <testsuite name="EstadoEnAlquiler" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:31" time="0.457" tests="8">
-    <testcase classname="EstadoEnAlquiler transiciones válidas debería cambiar el estado a EstadoDisponible al devolver el vehículo debería cambiar el estado a EstadoDisponible al devolver el vehículo" name="EstadoEnAlquiler transiciones válidas debería cambiar el estado a EstadoDisponible al devolver el vehículo debería cambiar el estado a EstadoDisponible al devolver el vehículo" time="0.002">
+    <testcase classname="Sedan Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" name="Sedan Gestión de estado debería delegar en el estado actual al intentar devolver debería delegar en el estado actual al intentar devolver" time="0.021">
     </testcase>
-    <testcase classname="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar alquilar un vehículo ya en alquiler debería lanzar un error al intentar alquilar un vehículo ya en alquiler" name="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar alquilar un vehículo ya en alquiler debería lanzar un error al intentar alquilar un vehículo ya en alquiler" time="0.002">
+    <testcase classname="Sedan Cálculo de costo final debería calcular correctamente el costo con factor de ajuste 1.0 debería calcular correctamente el costo con factor de ajuste 1.0" name="Sedan Cálculo de costo final debería calcular correctamente el costo con factor de ajuste 1.0 debería calcular correctamente el costo con factor de ajuste 1.0" time="0.023">
     </testcase>
-    <testcase classname="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar iniciar mantenimiento sin devolver antes debería lanzar un error al intentar iniciar mantenimiento sin devolver antes" name="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar iniciar mantenimiento sin devolver antes debería lanzar un error al intentar iniciar mantenimiento sin devolver antes" time="0.002">
-    </testcase>
-    <testcase classname="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar finalizar mantenimiento estando en alquiler debería lanzar un error al intentar finalizar mantenimiento estando en alquiler" name="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar finalizar mantenimiento estando en alquiler debería lanzar un error al intentar finalizar mantenimiento estando en alquiler" time="0.002">
-    </testcase>
-    <testcase classname="EstadoEnAlquiler consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" name="EstadoEnAlquiler consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" time="0.002">
-    </testcase>
-    <testcase classname="EstadoEnAlquiler consultas de estado debería indicar que el vehículo no está disponible debería indicar que el vehículo no está disponible" name="EstadoEnAlquiler consultas de estado debería indicar que el vehículo no está disponible debería indicar que el vehículo no está disponible" time="0.001">
-    </testcase>
-    <testcase classname="EstadoEnAlquiler consultas de estado debería indicar que el vehículo está en alquiler debería indicar que el vehículo está en alquiler" name="EstadoEnAlquiler consultas de estado debería indicar que el vehículo está en alquiler debería indicar que el vehículo está en alquiler" time="0.001">
-    </testcase>
-    <testcase classname="EstadoEnAlquiler consultas de estado debería indicar que el vehículo no está en mantenimiento debería indicar que el vehículo no está en mantenimiento" name="EstadoEnAlquiler consultas de estado debería indicar que el vehículo no está en mantenimiento debería indicar que el vehículo no está en mantenimiento" time="0.001">
+    <testcase classname="Sedan Cálculo de costo final debería calcular correctamente el costo con factor de ajuste 1.5 debería calcular correctamente el costo con factor de ajuste 1.5" name="Sedan Cálculo de costo final debería calcular correctamente el costo con factor de ajuste 1.5 debería calcular correctamente el costo con factor de ajuste 1.5" time="0.01">
     </testcase>
   </testsuite>
-  <testsuite name="VerificadorDisponibilidad" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:31" time="0.426" tests="5">
-    <testcase classname="VerificadorDisponibilidad estaDisponible debería devolver false si el vehículo no está en el repositorio debería devolver false si el vehículo no está en el repositorio" name="VerificadorDisponibilidad estaDisponible debería devolver false si el vehículo no está en el repositorio debería devolver false si el vehículo no está en el repositorio" time="0.006">
+  <testsuite name="VerificadorDisponibilidad" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:14:52" time="1.928" tests="5">
+    <testcase classname="VerificadorDisponibilidad estaDisponible debería devolver false si el vehículo no está en el repositorio debería devolver false si el vehículo no está en el repositorio" name="VerificadorDisponibilidad estaDisponible debería devolver false si el vehículo no está en el repositorio debería devolver false si el vehículo no está en el repositorio" time="0.015">
     </testcase>
-    <testcase classname="VerificadorDisponibilidad estaDisponible debería devolver false si el vehículo está en el repositorio pero no está disponible debería devolver false si el vehículo está en el repositorio pero no está disponible" name="VerificadorDisponibilidad estaDisponible debería devolver false si el vehículo está en el repositorio pero no está disponible debería devolver false si el vehículo está en el repositorio pero no está disponible" time="0.002">
+    <testcase classname="VerificadorDisponibilidad estaDisponible debería devolver false si el vehículo está en el repositorio pero no está disponible debería devolver false si el vehículo está en el repositorio pero no está disponible" name="VerificadorDisponibilidad estaDisponible debería devolver false si el vehículo está en el repositorio pero no está disponible debería devolver false si el vehículo está en el repositorio pero no está disponible" time="0.013">
     </testcase>
-    <testcase classname="VerificadorDisponibilidad estaDisponible debería devolver false si hay una reserva en conflicto para el mismo vehículo debería devolver false si hay una reserva en conflicto para el mismo vehículo" name="VerificadorDisponibilidad estaDisponible debería devolver false si hay una reserva en conflicto para el mismo vehículo debería devolver false si hay una reserva en conflicto para el mismo vehículo" time="0.001">
+    <testcase classname="VerificadorDisponibilidad estaDisponible debería devolver false si hay una reserva en conflicto para el mismo vehículo debería devolver false si hay una reserva en conflicto para el mismo vehículo" name="VerificadorDisponibilidad estaDisponible debería devolver false si hay una reserva en conflicto para el mismo vehículo debería devolver false si hay una reserva en conflicto para el mismo vehículo" time="0.011">
     </testcase>
-    <testcase classname="VerificadorDisponibilidad estaDisponible debería devolver true si no hay reservas en conflicto y el vehículo está disponible debería devolver true si no hay reservas en conflicto y el vehículo está disponible" name="VerificadorDisponibilidad estaDisponible debería devolver true si no hay reservas en conflicto y el vehículo está disponible debería devolver true si no hay reservas en conflicto y el vehículo está disponible" time="0.002">
+    <testcase classname="VerificadorDisponibilidad estaDisponible debería devolver true si no hay reservas en conflicto y el vehículo está disponible debería devolver true si no hay reservas en conflicto y el vehículo está disponible" name="VerificadorDisponibilidad estaDisponible debería devolver true si no hay reservas en conflicto y el vehículo está disponible debería devolver true si no hay reservas en conflicto y el vehículo está disponible" time="0.016">
     </testcase>
-    <testcase classname="VerificadorDisponibilidad estaDisponible debería devolver true si hay reservas pero ninguna con la misma matrícula debería devolver true si hay reservas pero ninguna con la misma matrícula" name="VerificadorDisponibilidad estaDisponible debería devolver true si hay reservas pero ninguna con la misma matrícula debería devolver true si hay reservas pero ninguna con la misma matrícula" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="RepositorioVehiculos" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:32" time="0.468" tests="6">
-    <testcase classname="RepositorioVehiculos Inicialización debería crear el repositorio vacío debería crear el repositorio vacío" name="RepositorioVehiculos Inicialización debería crear el repositorio vacío debería crear el repositorio vacío" time="0.002">
-    </testcase>
-    <testcase classname="RepositorioVehiculos Agregar y obtener vehículos debería agregar un vehículo y recuperarlo por matrícula debería agregar un vehículo y recuperarlo por matrícula" name="RepositorioVehiculos Agregar y obtener vehículos debería agregar un vehículo y recuperarlo por matrícula debería agregar un vehículo y recuperarlo por matrícula" time="0.002">
-    </testcase>
-    <testcase classname="RepositorioVehiculos Agregar y obtener vehículos debería devolver undefined si no existe el vehículo buscado debería devolver undefined si no existe el vehículo buscado" name="RepositorioVehiculos Agregar y obtener vehículos debería devolver undefined si no existe el vehículo buscado debería devolver undefined si no existe el vehículo buscado" time="0.003">
-    </testcase>
-    <testcase classname="RepositorioVehiculos Obtener todos los vehículos debería devolver todos los vehículos agregados debería devolver todos los vehículos agregados" name="RepositorioVehiculos Obtener todos los vehículos debería devolver todos los vehículos agregados debería devolver todos los vehículos agregados" time="0.005">
-    </testcase>
-    <testcase classname="RepositorioVehiculos Eliminar vehículos debería eliminar un vehículo por matrícula correctamente debería eliminar un vehículo por matrícula correctamente" name="RepositorioVehiculos Eliminar vehículos debería eliminar un vehículo por matrícula correctamente debería eliminar un vehículo por matrícula correctamente" time="0.002">
-    </testcase>
-    <testcase classname="RepositorioVehiculos Eliminar vehículos debería lanzar un error si el vehículo no existe al intentar eliminarlo debería lanzar un error si el vehículo no existe al intentar eliminarlo" name="RepositorioVehiculos Eliminar vehículos debería lanzar un error si el vehículo no existe al intentar eliminarlo debería lanzar un error si el vehículo no existe al intentar eliminarlo" time="0.001">
+    <testcase classname="VerificadorDisponibilidad estaDisponible debería devolver true si hay reservas pero ninguna con la misma matrícula debería devolver true si hay reservas pero ninguna con la misma matrícula" name="VerificadorDisponibilidad estaDisponible debería devolver true si hay reservas pero ninguna con la misma matrícula debería devolver true si hay reservas pero ninguna con la misma matrícula" time="0.017">
     </testcase>
   </testsuite>
-  <testsuite name="Test de Cliente" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:32" time="0.384" tests="5">
-    <testcase classname="Test de Cliente constructor debería crear una instancia de Cliente correctamente debería crear una instancia de Cliente correctamente" name="Test de Cliente constructor debería crear una instancia de Cliente correctamente debería crear una instancia de Cliente correctamente" time="0.002">
+  <testsuite name="Tests de CalculadoraDuracion" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:14:54" time="1.929" tests="10">
+    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente la duración en días entre dos fechas del mismo mes debería calcular correctamente la duración en días entre dos fechas del mismo mes" name="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente la duración en días entre dos fechas del mismo mes debería calcular correctamente la duración en días entre dos fechas del mismo mes" time="0.013">
     </testcase>
-    <testcase classname="Test de Cliente getID debería devolver el id correcto debería devolver el id correcto" name="Test de Cliente getID debería devolver el id correcto debería devolver el id correcto" time="0.002">
+    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnDias debería devolver 0 si las fechas son iguales debería devolver 0 si las fechas son iguales" name="Tests de CalculadoraDuracion calcularDuracionEnDias debería devolver 0 si las fechas son iguales debería devolver 0 si las fechas son iguales" time="0.008">
     </testcase>
-    <testcase classname="Test de Cliente getID debería devolver el id correcto para otro cliente debería devolver el id correcto para otro cliente" name="Test de Cliente getID debería devolver el id correcto para otro cliente debería devolver el id correcto para otro cliente" time="0.002">
+    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnDias debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin" name="Tests de CalculadoraDuracion calcularDuracionEnDias debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin" time="0.009">
     </testcase>
-    <testcase classname="Test de Cliente getNombre debería devolver el nombre correcto debería devolver el nombre correcto" name="Test de Cliente getNombre debería devolver el nombre correcto debería devolver el nombre correcto" time="0.002">
+    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente la diferencia entre meses distintos debería calcular correctamente la diferencia entre meses distintos" name="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente la diferencia entre meses distintos debería calcular correctamente la diferencia entre meses distintos" time="0.016">
     </testcase>
-    <testcase classname="Test de Cliente getNombre debería devolver el nombre correcto para otro cliente debería devolver el nombre correcto para otro cliente" name="Test de Cliente getNombre debería devolver el nombre correcto para otro cliente debería devolver el nombre correcto para otro cliente" time="0.001">
+    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente cuando hay cambio de año debería calcular correctamente cuando hay cambio de año" name="Tests de CalculadoraDuracion calcularDuracionEnDias debería calcular correctamente cuando hay cambio de año debería calcular correctamente cuando hay cambio de año" time="0.012">
     </testcase>
-  </testsuite>
-  <testsuite name="Tests de TemporadaBaja" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:33" time="0.377" tests="3">
-    <testcase classname="Tests de TemporadaBaja constructor debería crear una instancia de TemporadaBaja correctamente debería crear una instancia de TemporadaBaja correctamente" name="Tests de TemporadaBaja constructor debería crear una instancia de TemporadaBaja correctamente debería crear una instancia de TemporadaBaja correctamente" time="0.004">
+    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnMeses debería calcular correctamente los meses entre dos fechas del mismo año debería calcular correctamente los meses entre dos fechas del mismo año" name="Tests de CalculadoraDuracion calcularDuracionEnMeses debería calcular correctamente los meses entre dos fechas del mismo año debería calcular correctamente los meses entre dos fechas del mismo año" time="0.008">
     </testcase>
-    <testcase classname="Tests de TemporadaBaja obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" name="Tests de TemporadaBaja obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" time="0.002">
+    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnMeses debería calcular correctamente los meses entre años distintos debería calcular correctamente los meses entre años distintos" name="Tests de CalculadoraDuracion calcularDuracionEnMeses debería calcular correctamente los meses entre años distintos debería calcular correctamente los meses entre años distintos" time="0.017">
     </testcase>
-    <testcase classname="Tests de TemporadaBaja obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" name="Tests de TemporadaBaja obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" time="0.001">
+    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnMeses debería devolver 0 si las fechas son del mismo mes y año debería devolver 0 si las fechas son del mismo mes y año" name="Tests de CalculadoraDuracion calcularDuracionEnMeses debería devolver 0 si las fechas son del mismo mes y año debería devolver 0 si las fechas son del mismo mes y año" time="0.025">
     </testcase>
-  </testsuite>
-  <testsuite name="Tests de TemporadaAlta" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:33" time="0.368" tests="3">
-    <testcase classname="Tests de TemporadaAlta constructor debería crear una instancia de TemporadaAlta correctamente debería crear una instancia de TemporadaAlta correctamente" name="Tests de TemporadaAlta constructor debería crear una instancia de TemporadaAlta correctamente debería crear una instancia de TemporadaAlta correctamente" time="0.001">
+    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnMeses debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin" name="Tests de CalculadoraDuracion calcularDuracionEnMeses debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin debería devolver un número positivo aunque la fecha de inicio es posterior a la de fin" time="0.016">
     </testcase>
-    <testcase classname="Tests de TemporadaAlta obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" name="Tests de TemporadaAlta obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" time="0.001">
-    </testcase>
-    <testcase classname="Tests de TemporadaAlta obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" name="Tests de TemporadaAlta obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" time="0.001">
+    <testcase classname="Tests de CalculadoraDuracion calcularDuracionEnMeses debería manejar correctamente una diferencia de varios años debería manejar correctamente una diferencia de varios años" name="Tests de CalculadoraDuracion calcularDuracionEnMeses debería manejar correctamente una diferencia de varios años debería manejar correctamente una diferencia de varios años" time="0.013">
     </testcase>
   </testsuite>
-  <testsuite name="Tests de TemporadaMedia" errors="0" failures="0" skipped="0" timestamp="2025-11-11T19:39:34" time="0.382" tests="3">
-    <testcase classname="Tests de TemporadaMedia constructor debería crear una instancia de TemporadaMedia correctamente debería crear una instancia de TemporadaMedia correctamente" name="Tests de TemporadaMedia constructor debería crear una instancia de TemporadaMedia correctamente debería crear una instancia de TemporadaMedia correctamente" time="0.001">
+  <testsuite name="EstadoDisponible" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:14:56" time="2.157" tests="8">
+    <testcase classname="EstadoDisponible transiciones válidas debería cambiar el estado a EstadoEnAlquiler al alquilar debería cambiar el estado a EstadoEnAlquiler al alquilar" name="EstadoDisponible transiciones válidas debería cambiar el estado a EstadoEnAlquiler al alquilar debería cambiar el estado a EstadoEnAlquiler al alquilar" time="0.018">
     </testcase>
-    <testcase classname="Tests de TemporadaMedia obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" name="Tests de TemporadaMedia obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" time="0.002">
+    <testcase classname="EstadoDisponible transiciones válidas debería cambiar el estado a EstadoEnMantenimiento al iniciar mantenimiento debería cambiar el estado a EstadoEnMantenimiento al iniciar mantenimiento" name="EstadoDisponible transiciones válidas debería cambiar el estado a EstadoEnMantenimiento al iniciar mantenimiento debería cambiar el estado a EstadoEnMantenimiento al iniciar mantenimiento" time="0.013">
     </testcase>
-    <testcase classname="Tests de TemporadaMedia obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" name="Tests de TemporadaMedia obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" time="0.001">
+    <testcase classname="EstadoDisponible operaciones inválidas debería lanzar un error al intentar devolver un vehículo disponible debería lanzar un error al intentar devolver un vehículo disponible" name="EstadoDisponible operaciones inválidas debería lanzar un error al intentar devolver un vehículo disponible debería lanzar un error al intentar devolver un vehículo disponible" time="0.009">
+    </testcase>
+    <testcase classname="EstadoDisponible operaciones inválidas debería lanzar un error al intentar finalizar mantenimiento cuando está disponible debería lanzar un error al intentar finalizar mantenimiento cuando está disponible" name="EstadoDisponible operaciones inválidas debería lanzar un error al intentar finalizar mantenimiento cuando está disponible debería lanzar un error al intentar finalizar mantenimiento cuando está disponible" time="0.012">
+    </testcase>
+    <testcase classname="EstadoDisponible consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" name="EstadoDisponible consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" time="0.01">
+    </testcase>
+    <testcase classname="EstadoDisponible consultas de estado debería indicar que el vehículo está disponible debería indicar que el vehículo está disponible" name="EstadoDisponible consultas de estado debería indicar que el vehículo está disponible debería indicar que el vehículo está disponible" time="0.013">
+    </testcase>
+    <testcase classname="EstadoDisponible consultas de estado debería indicar que el vehículo no está en alquiler debería indicar que el vehículo no está en alquiler" name="EstadoDisponible consultas de estado debería indicar que el vehículo no está en alquiler debería indicar que el vehículo no está en alquiler" time="0.018">
+    </testcase>
+    <testcase classname="EstadoDisponible consultas de estado debería indicar que el vehículo no está en mantenimiento debería indicar que el vehículo no está en mantenimiento" name="EstadoDisponible consultas de estado debería indicar que el vehículo no está en mantenimiento debería indicar que el vehículo no está en mantenimiento" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="EstadoEnAlquiler" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:14:58" time="2.04" tests="8">
+    <testcase classname="EstadoEnAlquiler transiciones válidas debería cambiar el estado a EstadoDisponible al devolver el vehículo debería cambiar el estado a EstadoDisponible al devolver el vehículo" name="EstadoEnAlquiler transiciones válidas debería cambiar el estado a EstadoDisponible al devolver el vehículo debería cambiar el estado a EstadoDisponible al devolver el vehículo" time="0.016">
+    </testcase>
+    <testcase classname="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar alquilar un vehículo ya en alquiler debería lanzar un error al intentar alquilar un vehículo ya en alquiler" name="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar alquilar un vehículo ya en alquiler debería lanzar un error al intentar alquilar un vehículo ya en alquiler" time="0.011">
+    </testcase>
+    <testcase classname="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar iniciar mantenimiento sin devolver antes debería lanzar un error al intentar iniciar mantenimiento sin devolver antes" name="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar iniciar mantenimiento sin devolver antes debería lanzar un error al intentar iniciar mantenimiento sin devolver antes" time="0.01">
+    </testcase>
+    <testcase classname="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar finalizar mantenimiento estando en alquiler debería lanzar un error al intentar finalizar mantenimiento estando en alquiler" name="EstadoEnAlquiler operaciones inválidas debería lanzar un error al intentar finalizar mantenimiento estando en alquiler debería lanzar un error al intentar finalizar mantenimiento estando en alquiler" time="0.015">
+    </testcase>
+    <testcase classname="EstadoEnAlquiler consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" name="EstadoEnAlquiler consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" time="0.014">
+    </testcase>
+    <testcase classname="EstadoEnAlquiler consultas de estado debería indicar que el vehículo no está disponible debería indicar que el vehículo no está disponible" name="EstadoEnAlquiler consultas de estado debería indicar que el vehículo no está disponible debería indicar que el vehículo no está disponible" time="0.039">
+    </testcase>
+    <testcase classname="EstadoEnAlquiler consultas de estado debería indicar que el vehículo está en alquiler debería indicar que el vehículo está en alquiler" name="EstadoEnAlquiler consultas de estado debería indicar que el vehículo está en alquiler debería indicar que el vehículo está en alquiler" time="0.013">
+    </testcase>
+    <testcase classname="EstadoEnAlquiler consultas de estado debería indicar que el vehículo no está en mantenimiento debería indicar que el vehículo no está en mantenimiento" name="EstadoEnAlquiler consultas de estado debería indicar que el vehículo no está en mantenimiento debería indicar que el vehículo no está en mantenimiento" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="RepositorioVehiculos" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:15:00" time="2.1" tests="6">
+    <testcase classname="RepositorioVehiculos Inicialización debería crear el repositorio vacío debería crear el repositorio vacío" name="RepositorioVehiculos Inicialización debería crear el repositorio vacío debería crear el repositorio vacío" time="0.012">
+    </testcase>
+    <testcase classname="RepositorioVehiculos Agregar y obtener vehículos debería agregar un vehículo y recuperarlo por matrícula debería agregar un vehículo y recuperarlo por matrícula" name="RepositorioVehiculos Agregar y obtener vehículos debería agregar un vehículo y recuperarlo por matrícula debería agregar un vehículo y recuperarlo por matrícula" time="0.012">
+    </testcase>
+    <testcase classname="RepositorioVehiculos Agregar y obtener vehículos debería devolver undefined si no existe el vehículo buscado debería devolver undefined si no existe el vehículo buscado" name="RepositorioVehiculos Agregar y obtener vehículos debería devolver undefined si no existe el vehículo buscado debería devolver undefined si no existe el vehículo buscado" time="0.012">
+    </testcase>
+    <testcase classname="RepositorioVehiculos Obtener todos los vehículos debería devolver todos los vehículos agregados debería devolver todos los vehículos agregados" name="RepositorioVehiculos Obtener todos los vehículos debería devolver todos los vehículos agregados debería devolver todos los vehículos agregados" time="0.02">
+    </testcase>
+    <testcase classname="RepositorioVehiculos Eliminar vehículos debería eliminar un vehículo por matrícula correctamente debería eliminar un vehículo por matrícula correctamente" name="RepositorioVehiculos Eliminar vehículos debería eliminar un vehículo por matrícula correctamente debería eliminar un vehículo por matrícula correctamente" time="0.021">
+    </testcase>
+    <testcase classname="RepositorioVehiculos Eliminar vehículos debería lanzar un error si el vehículo no existe al intentar eliminarlo debería lanzar un error si el vehículo no existe al intentar eliminarlo" name="RepositorioVehiculos Eliminar vehículos debería lanzar un error si el vehículo no existe al intentar eliminarlo debería lanzar un error si el vehículo no existe al intentar eliminarlo" time="0.013">
+    </testcase>
+  </testsuite>
+  <testsuite name="EstadoEnMantenimiento" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:15:02" time="2.279" tests="8">
+    <testcase classname="EstadoEnMantenimiento transiciones válidas debería cambiar el estado a EstadoDisponible al finalizar mantenimiento debería cambiar el estado a EstadoDisponible al finalizar mantenimiento" name="EstadoEnMantenimiento transiciones válidas debería cambiar el estado a EstadoDisponible al finalizar mantenimiento debería cambiar el estado a EstadoDisponible al finalizar mantenimiento" time="0.014">
+    </testcase>
+    <testcase classname="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar alquilar un vehículo en mantenimiento debería lanzar un error al intentar alquilar un vehículo en mantenimiento" name="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar alquilar un vehículo en mantenimiento debería lanzar un error al intentar alquilar un vehículo en mantenimiento" time="0.01">
+    </testcase>
+    <testcase classname="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar devolver un vehículo en mantenimiento debería lanzar un error al intentar devolver un vehículo en mantenimiento" name="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar devolver un vehículo en mantenimiento debería lanzar un error al intentar devolver un vehículo en mantenimiento" time="0.008">
+    </testcase>
+    <testcase classname="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar iniciar mantenimiento nuevamente debería lanzar un error al intentar iniciar mantenimiento nuevamente" name="EstadoEnMantenimiento operaciones inválidas debería lanzar un error al intentar iniciar mantenimiento nuevamente debería lanzar un error al intentar iniciar mantenimiento nuevamente" time="0.009">
+    </testcase>
+    <testcase classname="EstadoEnMantenimiento consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" name="EstadoEnMantenimiento consultas de estado debería retornar el nombre correcto del estado debería retornar el nombre correcto del estado" time="0.014">
+    </testcase>
+    <testcase classname="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo no está disponible debería indicar que el vehículo no está disponible" name="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo no está disponible debería indicar que el vehículo no está disponible" time="0.059">
+    </testcase>
+    <testcase classname="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo no está en alquiler debería indicar que el vehículo no está en alquiler" name="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo no está en alquiler debería indicar que el vehículo no está en alquiler" time="0.029">
+    </testcase>
+    <testcase classname="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo está en mantenimiento debería indicar que el vehículo está en mantenimiento" name="EstadoEnMantenimiento consultas de estado debería indicar que el vehículo está en mantenimiento debería indicar que el vehículo está en mantenimiento" time="0.021">
+    </testcase>
+  </testsuite>
+  <testsuite name="Tests de Reserva" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:15:05" time="2.593" tests="7">
+    <testcase classname="Tests de Reserva constructor debería crear una instancia de Reserva correctamente debería crear una instancia de Reserva correctamente" name="Tests de Reserva constructor debería crear una instancia de Reserva correctamente debería crear una instancia de Reserva correctamente" time="0.019">
+    </testcase>
+    <testcase classname="Tests de Reserva getId debería devolver el id correcto debería devolver el id correcto" name="Tests de Reserva getId debería devolver el id correcto debería devolver el id correcto" time="0.008">
+    </testcase>
+    <testcase classname="Tests de Reserva getFechaInicio debería devolver la fecha de inicio correcta debería devolver la fecha de inicio correcta" name="Tests de Reserva getFechaInicio debería devolver la fecha de inicio correcta debería devolver la fecha de inicio correcta" time="0.008">
+    </testcase>
+    <testcase classname="Tests de Reserva getFechaFin debería devolver la fecha de fin correcta debería devolver la fecha de fin correcta" name="Tests de Reserva getFechaFin debería devolver la fecha de fin correcta debería devolver la fecha de fin correcta" time="0.012">
+    </testcase>
+    <testcase classname="Tests de Reserva getVehiculo debería devolver el vehículo correcto debería devolver el vehículo correcto" name="Tests de Reserva getVehiculo debería devolver el vehículo correcto debería devolver el vehículo correcto" time="0.009">
+    </testcase>
+    <testcase classname="Tests de Reserva getCliente debería devolver el cliente correcto debería devolver el cliente correcto" name="Tests de Reserva getCliente debería devolver el cliente correcto debería devolver el cliente correcto" time="0.017">
+    </testcase>
+    <testcase classname="Tests de Reserva getTemporada debería devolver la temporada correcta debería devolver la temporada correcta" name="Tests de Reserva getTemporada debería devolver la temporada correcta debería devolver la temporada correcta" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test de Cliente" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:15:07" time="2.032" tests="5">
+    <testcase classname="Test de Cliente constructor debería crear una instancia de Cliente correctamente debería crear una instancia de Cliente correctamente" name="Test de Cliente constructor debería crear una instancia de Cliente correctamente debería crear una instancia de Cliente correctamente" time="0.012">
+    </testcase>
+    <testcase classname="Test de Cliente getID debería devolver el id correcto debería devolver el id correcto" name="Test de Cliente getID debería devolver el id correcto debería devolver el id correcto" time="0.017">
+    </testcase>
+    <testcase classname="Test de Cliente getID debería devolver el id correcto para otro cliente debería devolver el id correcto para otro cliente" name="Test de Cliente getID debería devolver el id correcto para otro cliente debería devolver el id correcto para otro cliente" time="0.017">
+    </testcase>
+    <testcase classname="Test de Cliente getNombre debería devolver el nombre correcto debería devolver el nombre correcto" name="Test de Cliente getNombre debería devolver el nombre correcto debería devolver el nombre correcto" time="0.038">
+    </testcase>
+    <testcase classname="Test de Cliente getNombre debería devolver el nombre correcto para otro cliente debería devolver el nombre correcto para otro cliente" name="Test de Cliente getNombre debería devolver el nombre correcto para otro cliente debería devolver el nombre correcto para otro cliente" time="0.03">
+    </testcase>
+  </testsuite>
+  <testsuite name="Tests de TemporadaMedia" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:15:09" time="1.791" tests="3">
+    <testcase classname="Tests de TemporadaMedia constructor debería crear una instancia de TemporadaMedia correctamente debería crear una instancia de TemporadaMedia correctamente" name="Tests de TemporadaMedia constructor debería crear una instancia de TemporadaMedia correctamente debería crear una instancia de TemporadaMedia correctamente" time="0.011">
+    </testcase>
+    <testcase classname="Tests de TemporadaMedia obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" name="Tests de TemporadaMedia obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" time="0.008">
+    </testcase>
+    <testcase classname="Tests de TemporadaMedia obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" name="Tests de TemporadaMedia obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="Tests de TemporadaBaja" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:15:11" time="1.69" tests="3">
+    <testcase classname="Tests de TemporadaBaja constructor debería crear una instancia de TemporadaBaja correctamente debería crear una instancia de TemporadaBaja correctamente" name="Tests de TemporadaBaja constructor debería crear una instancia de TemporadaBaja correctamente debería crear una instancia de TemporadaBaja correctamente" time="0.016">
+    </testcase>
+    <testcase classname="Tests de TemporadaBaja obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" name="Tests de TemporadaBaja obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" time="0.01">
+    </testcase>
+    <testcase classname="Tests de TemporadaBaja obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" name="Tests de TemporadaBaja obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="Tests de TemporadaAlta" errors="0" failures="0" skipped="0" timestamp="2025-11-12T00:15:13" time="1.884" tests="3">
+    <testcase classname="Tests de TemporadaAlta constructor debería crear una instancia de TemporadaAlta correctamente debería crear una instancia de TemporadaAlta correctamente" name="Tests de TemporadaAlta constructor debería crear una instancia de TemporadaAlta correctamente debería crear una instancia de TemporadaAlta correctamente" time="0.014">
+    </testcase>
+    <testcase classname="Tests de TemporadaAlta obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" name="Tests de TemporadaAlta obtenerFactorAjuste debería devolver el factor de ajuste correcto debería devolver el factor de ajuste correcto" time="0.01">
+    </testcase>
+    <testcase classname="Tests de TemporadaAlta obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" name="Tests de TemporadaAlta obtenerFactorAjuste debería devolver siempre el mismo valor debería devolver siempre el mismo valor" time="0.009">
     </testcase>
   </testsuite>
 </testsuites>
