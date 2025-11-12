@@ -1,7 +1,7 @@
 import EstadoDisponible from "./estadoDisponible";
 import IVehiculoEstado from "./iVehiculoEstado";
 import Vehiculo from "./vehiculo";
-
+import { NOMBRE_ESTADO_EN_ALQUILER } from "./constantes";
 /**
  * Representa el estado "En alquiler" dentro del patrón State utilizado por la clase 'Vehiculo'.
  *
@@ -32,7 +32,7 @@ export default class EstadoEnAlquiler implements IVehiculoEstado {
      * @returns El nombre del estado: "En alquiler".
      */
     public getNombre(): string {
-        return "En alquiler";
+        return NOMBRE_ESTADO_EN_ALQUILER;
     }
 
     /**

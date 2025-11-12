@@ -2,7 +2,7 @@ import Cliente from "./cliente";
 import ITemporada from "./iTemporada";
 import Reserva from "./reserva";
 import Vehiculo from "./vehiculo";
-
+import { ID_RESERVA_INICIAL } from "./constantes";
 /**
  * Repositorio encargado de gestionar las reservas activas y el historial completo de reservas.
  *
@@ -17,7 +17,7 @@ export default class RepositorioReservas {
 
     private reservas: Map<number, Reserva>;
     private historialReservas: Map<number, Reserva>;
-    private siguienteId: number = 1;
+    private siguienteId: number = ID_RESERVA_INICIAL;
 
     /**
      * Crea un repositorio vacío de reservas.

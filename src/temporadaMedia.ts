@@ -1,5 +1,5 @@
 import ITemporada from "./iTemporada";
-
+import { FACTOR_AJUSTE_TEMPORADA_MEDIA } from "./constantes";
 /**
  * Representa la temporada media en el sistema de alquiler.
  *
@@ -17,6 +17,6 @@ export default class TemporadaMedia implements ITemporada {
      * @returns El valor **1**, que no altera la tarifa base.
      */
     public obtenerFactorAjuste(): number {
-        return 1;
+        return FACTOR_AJUSTE_TEMPORADA_MEDIA;
     }
 }

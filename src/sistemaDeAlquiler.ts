@@ -125,7 +125,6 @@ export default class SistemaDeAlquiler {
         vehiculo.actualizarKilometros(kilometrajeTotal);
         vehiculo.incrementarAlquileres();
 
-        // Si requiere mantenimiento, se cambia estado y se descuenta costo.
         if (
             vehiculo.necesitaMantenimientoPorKm() ||
             vehiculo.necesitaMantenimientoPorTiempo(fechaFin) ||

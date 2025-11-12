@@ -1,5 +1,11 @@
 import ITemporada from "./iTemporada";
 import Vehiculo from "./vehiculo";
+import {
+    TARIFA_BASE_COMPACTO,
+    CARGO_COMPACTO,
+    COSTO_MATENIMIENTO_COMPACTO,
+    KM_SIN_RECARGO_COMPACTO
+ } from "./constantes";
 
 /**
  * Representa un vehículo de tipo "Compacto".
@@ -21,7 +27,7 @@ export default class Compacto extends Vehiculo {
      *
      */
     constructor(numeroMatricula: string) {
-        super(numeroMatricula, 30, 0.15, 20);
+        super(numeroMatricula, TARIFA_BASE_COMPACTO, CARGO_COMPACTO, COSTO_MATENIMIENTO_COMPACTO);
     }
 
     /**
@@ -57,7 +63,7 @@ export default class Compacto extends Vehiculo {
         const factorAjuste: number = temporada.obtenerFactorAjuste();
         const tarifaBaseAjustada: number = this.tarifaBase * factorAjuste;
 
-        if (kilometrajeDiario > 100) {
+        if (kilometrajeDiario > KM_SIN_RECARGO_COMPACTO) {
             adicional = this.cargo * kilometrajeDiario;
         }
 

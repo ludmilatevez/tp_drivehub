@@ -1,5 +1,12 @@
 import ITemporada from "./iTemporada";
 import Vehiculo from "./vehiculo";
+import {
+    TARIFA_BASE_SUV,
+    CARGO_SUV,
+    COSTO_MATENIMIENTO_SUV,
+    KM_SIN_RECARGO_SUV,
+    CARGO_SEGURO_SUV
+ } from "./constantes";
 
 /**
  * Representa un vehículo de tipo SUV dentro del sistema de alquiler.
@@ -29,8 +36,8 @@ export default class Suv extends Vehiculo {
      * @param numeroMatricula - Identificador único del vehículo.
      */
     constructor(numeroMatricula: string) {
-        super(numeroMatricula, 80, 0.25, 30);
-        this.cargoPorSeguro = 15;
+        super(numeroMatricula, TARIFA_BASE_SUV, CARGO_SUV, COSTO_MATENIMIENTO_SUV);
+        this.cargoPorSeguro = CARGO_SEGURO_SUV;
     }
 
     /**
@@ -61,7 +68,7 @@ export default class Suv extends Vehiculo {
         const factorAjuste: number = temporada.obtenerFactorAjuste();
         const tarifaBaseAjustada: number = this.tarifaBase * factorAjuste;
         
-        if (kilometrajeDiario * diasReservados > 500) {
+        if (kilometrajeDiario * diasReservados > KM_SIN_RECARGO_SUV) {
             adicional = this.cargo * kilometrajeDiario;
         }
 

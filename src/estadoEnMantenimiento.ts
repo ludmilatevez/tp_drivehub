@@ -1,6 +1,7 @@
 import EstadoDisponible from "./estadoDisponible";
 import IVehiculoEstado from "./iVehiculoEstado";
 import Vehiculo from "./vehiculo";
+import { NOMBRE_ESTADO_EN_MANTENIMIENTO } from "./constantes";
 
 /**
  * Representa el estado "En mantenimiento" dentro del patrón State utilizado por 'Vehiculo'.
@@ -32,7 +33,7 @@ export default class EstadoEnMantenimiento implements IVehiculoEstado {
      * @returns "En mantenimiento".
      */
     public getNombre(): string {
-        return "En mantenimiento";
+        return NOMBRE_ESTADO_EN_MANTENIMIENTO;
     }
 
     /**

@@ -1,5 +1,5 @@
 import ITemporada from "./iTemporada";
-
+import { FACTOR_AJUSTE_TEMPORADA_ALTA } from "./constantes";
 /**
  * Representa la temporada alta dentro del sistema de alquiler.
  *
@@ -17,6 +17,6 @@ export default class TemporadaAlta implements ITemporada {
      * @returns El valor **1.2**, equivalente a un aumento del 20%.
      */
     public obtenerFactorAjuste(): number {
-        return 1.2;
+        return FACTOR_AJUSTE_TEMPORADA_ALTA;
     }
 }

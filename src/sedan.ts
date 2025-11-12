@@ -1,5 +1,10 @@
 import ITemporada from "./iTemporada";
 import Vehiculo from "./vehiculo";
+import {
+    TARIFA_BASE_SEDAN,
+    CARGO_SEDAN,
+    COSTO_MATENIMIENTO_SEDAN
+ } from "./constantes";
 
 /**
  * Representa un vehículo de tipo Sedán dentro del sistema.
@@ -20,7 +25,7 @@ export default class Sedan extends Vehiculo {
      * @param numeroMatricula - Identificador único del vehículo.
      */
     constructor(numeroMatricula: string) {
-        super(numeroMatricula, 50, 0.20, 25);
+        super(numeroMatricula, TARIFA_BASE_SEDAN, CARGO_SEDAN, COSTO_MATENIMIENTO_SEDAN);
     }
 
     /**
