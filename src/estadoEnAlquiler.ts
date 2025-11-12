@@ -15,7 +15,6 @@ import Vehiculo from "./vehiculo";
  */
 export default class EstadoEnAlquiler implements IVehiculoEstado {
 
-    /** Vehículo asociado a este estado. */
     private vehiculo!: Vehiculo;
 
     /**

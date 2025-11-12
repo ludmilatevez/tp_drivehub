@@ -19,34 +19,16 @@ import IVehiculoEstado from "./iVehiculoEstado";
  * que define cómo se calcula el costo total del alquiler según el tipo de vehículo.
  */
 export default abstract class Vehiculo {
-    /** Número de matrícula único del vehículo. */
-    protected numeroMatricula: string;
-
-    /** Estado actual del vehículo (patrón State). */
+    
+    protected numeroMatricula: string;   
     protected estado: IVehiculoEstado;
-
-    /** Tarifa base diaria del vehículo. */
     protected tarifaBase: number;
-
-    /** Cargo adicional por kilómetro, depende del tipo de vehículo. */
     protected cargo: number;
-
-    /** Costo del mantenimiento que se descuenta de la rentabilidad. */
     protected costoDeMantenimiento: number;
-
-    /** Kilómetros acumulados desde el último mantenimiento. */
     protected kmDesdeElUltimoMantenimiento: number;
-
-    /** Fecha en la que se realizó el último mantenimiento. */
     protected fechaUltimoMantenimiento: Date;
-
-    /** Cantidad total de alquileres completados. */
     protected alquileresCompletadosTotales: number;
-
-    /** Cantidad de alquileres desde el último mantenimiento. */
     protected alquileresParaMantenimiento: number;
-
-    /** Rentabilidad total generada por el vehículo. */
     protected rentabilidad: number;
 
     /**
@@ -83,7 +65,7 @@ export default abstract class Vehiculo {
 
     
 
-    // ---------------------- MANTENIMIENTO ------------------------    
+     
     /**
      * Determina si el vehículo necesita mantenimiento debido a la cantidad de alquileres.
      * 
