@@ -1,15 +1,9 @@
 import ITemporada from "./iTemporada";
 import Vehiculo from "./vehiculo";
-import {
-    TARIFA_BASE_COMPACTO,
-    CARGO_COMPACTO,
-    COSTO_MATENIMIENTO_COMPACTO,
-    KM_SIN_RECARGO_COMPACTO
- } from "./constantes";
+import { TARIFA_BASE_COMPACTO, CARGO_COMPACTO, COSTO_MATENIMIENTO_COMPACTO, KM_SIN_RECARGO_COMPACTO } from "./constantes";
 
 /**
  * Representa un vehículo de tipo "Compacto".
- *
  * Este tipo de vehículo posee:
  * - Tarifa base fija de 30 unidades monetarias por día.
  * - Cargo adicional del 0.15 por kilómetro cuando excede los 100 km diarios.
@@ -22,9 +16,7 @@ export default class Compacto extends Vehiculo {
 
     /**
      * Crea una nueva instancia de un vehículo compacto.
-     *
      * @param numeroMatricula - Número único de identificación del vehículo.
-     *
      */
     constructor(numeroMatricula: string) {
         super(numeroMatricula, TARIFA_BASE_COMPACTO, CARGO_COMPACTO, COSTO_MATENIMIENTO_COMPACTO);
@@ -32,30 +24,24 @@ export default class Compacto extends Vehiculo {
 
     /**
      * Calcula el costo final del alquiler del vehículo.
-     *
      * El cálculo utiliza:
      * - el kilometraje total recorrido,
      * - la cantidad de días reservados,
      * - el factor de ajuste de la temporada.
-     *
      * Lógica:
      * - Se calcula el kilometraje promedio diario.
      * - Si supera los **100 km diarios**, se agrega un costo adicional 
      *   proporcional al cargo definido para la categoría.
      * - La tarifa base se ajusta con el factor proporcionado por la temporada.
-     *
      * @param kilometrajeTotal - Total de kilómetros recorridos durante el alquiler.
      * @param diasReservados - Cantidad total de días de reserva.
      * @param temporada - Implementación de 'ITemporada' que proporciona el factor de ajuste.
-     *
      * @returns El costo final calculado del alquiler.
-
      */
     public calcularCostoFinal(
         kilometrajeTotal: number,
         diasReservados: number,
-        temporada: ITemporada
-    ): number {
+        temporada: ITemporada): number {
         let adicional: number = 0;
         let costoFinal: number;
 

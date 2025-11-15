@@ -5,22 +5,19 @@ import IVehiculoEstado from "./iVehiculoEstado";
 
 /**
  * Clase abstracta que representa un vehículo dentro del sistema de alquiler.
- * 
  * Implementa toda la lógica común relacionada con:
- * - Estados del vehículo (disponible, en alquiler, en mantenimiento)
- * - Control de mantenimiento por:
- *      - kilómetros recorridos,
- *      - tiempo transcurrido,
- *      - cantidad de alquileres,
- * - Cálculo de rentabilidad,
- * - Gestión de kilometraje y alquileres.
- *
- * Las subclases deben implementar el método abstracto 'calcularCostoFinal',
- * que define cómo se calcula el costo total del alquiler según el tipo de vehículo.
+ *  - Estados del vehículo (disponible, en alquiler, en mantenimiento)
+ *  - Control de mantenimiento por:
+ *  - kilómetros recorridos,
+ *  - tiempo transcurrido,
+ *  - cantidad de alquileres,
+ *  - Cálculo de rentabilidad,
+ *  - Gestión de kilometraje y alquileres.
+ * Las subclases deben implementar el método abstracto 'calcularCostoFinal', que define cómo se calcula el costo total del alquiler según el tipo de vehículo.
  */
 export default abstract class Vehiculo {
-    
-    protected numeroMatricula: string;   
+
+    protected numeroMatricula: string;
     protected estado: IVehiculoEstado;
     protected tarifaBase: number;
     protected cargo: number;
@@ -33,7 +30,6 @@ export default abstract class Vehiculo {
 
     /**
      * Inicializa un vehículo estableciendo su matrícula, tarifas y estado inicial.
-     *
      * @param numeroMatricula Matrícula única del vehículo.
      * @param tarifaBase Tarifa base diaria del vehículo.
      * @param cargo Cargo por kilómetro o condición especial (según el tipo).
@@ -43,8 +39,7 @@ export default abstract class Vehiculo {
         numeroMatricula: string,
         tarifaBase: number,
         cargo: number,
-        costoDeMantenimiento: number
-    ) {
+        costoDeMantenimiento: number) {
         this.numeroMatricula = numeroMatricula;
 
         this.estado = new EstadoDisponible();
@@ -63,12 +58,8 @@ export default abstract class Vehiculo {
         this.rentabilidad = 0;
     }
 
-    
-
-     
     /**
      * Determina si el vehículo necesita mantenimiento debido a la cantidad de alquileres.
-     * 
      * @returns 'true' si se completaron 5 alquileres desde el último mantenimiento.
      */
     public necesitaMantenimientoPorAlquileres(): boolean {
@@ -77,7 +68,6 @@ export default abstract class Vehiculo {
 
     /**
      * Determina si el vehículo requiere mantenimiento por kilometraje.
-     *
      * @returns 'true' si recorrió al menos 10.000 km desde el último mantenimiento.
      */
     public necesitaMantenimientoPorKm(): boolean {
@@ -86,15 +76,13 @@ export default abstract class Vehiculo {
 
     /**
      * Determina si el vehículo debe recibir mantenimiento por tiempo.
-     *
      * @param fechaFinAlquiler Fecha en que finaliza el alquiler.
      * @returns 'true' si transcurrieron 12 o más meses desde el último mantenimiento.
      */
     public necesitaMantenimientoPorTiempo(fechaFinAlquiler: Date): boolean {
         const meses = CalculadoraDuracion.calcularDuracionEnMeses(
             this.fechaUltimoMantenimiento,
-            fechaFinAlquiler
-        );
+            fechaFinAlquiler);
         return meses >= 12;
     }
 
@@ -104,16 +92,16 @@ export default abstract class Vehiculo {
     public getCostoMantenimiento(): number {
         return this.costoDeMantenimiento;
     }
-    
 
-    /** @returns La rentabilidad total acumulada del vehículo. */
+    /**
+     * @returns La rentabilidad total acumulada del vehículo. 
+     */
     public getRentabilidad(): number {
         return this.rentabilidad;
     }
 
     /**
      * Resta de la rentabilidad el costo del mantenimiento.
-     *
      * @param costoMantenimiento Monto a descontar.
      */
     public disminuirRentabilidad(costoMantenimiento: number): void {
@@ -122,15 +110,15 @@ export default abstract class Vehiculo {
 
     /**
      * Suma a la rentabilidad el ingreso obtenido por el alquiler.
-     *
      * @param ingresoPorAlquiler Importe generado.
      */
     public aumentarRentabilidad(ingresoPorAlquiler: number): void {
         this.rentabilidad += ingresoPorAlquiler;
     }
-  
-   
-    /** Incrementa las estadísticas de alquiler del vehículo. */
+
+    /**
+     *  Incrementa las estadísticas de alquiler del vehículo. 
+     */
     public incrementarAlquileres(): void {
         this.alquileresCompletadosTotales++;
         this.alquileresParaMantenimiento++;
@@ -138,42 +126,49 @@ export default abstract class Vehiculo {
 
     /**
      * Acumula los kilómetros recorridos desde el último mantenimiento.
-     *
      * @param totalKilometrosRecorridos Kilómetros del alquiler actual.
      */
     public actualizarKilometros(totalKilometrosRecorridos: number): void {
         this.kmDesdeElUltimoMantenimiento += totalKilometrosRecorridos;
     }
 
-    /** @returns Km recorridos desde el último mantenimiento. */
+    /**
+     * @returns Km recorridos desde el último mantenimiento. 
+     */
     public getKmDesdeElUltimoMantenimiento(): number {
         return this.kmDesdeElUltimoMantenimiento;
     }
 
-    /** @returns Fecha del último mantenimiento. */
+    /**
+     * @returns Fecha del último mantenimiento. 
+     */
     public getFechaUltimoMantenimiento(): Date {
         return this.fechaUltimoMantenimiento;
     }
 
-    /** @returns Cantidad total de alquileres completados. */
+    /** 
+     * @returns Cantidad total de alquileres completados. 
+     */
     public getAlquileresCompletados(): number {
         return this.alquileresCompletadosTotales;
     }
 
-    /** @returns Matrícula del vehículo. */
+    /** 
+     * @returns Matrícula del vehículo.
+     */
     public getNumeroMatricula(): string {
         return this.numeroMatricula;
     }
 
-    /** @returns Cantidad total de alquileres completados. (Alias) */
+    /** 
+     * @returns Cantidad total de alquileres completados. (Alias) 
+     */
     public getCantidadTotalAlquileres(): number {
         return this.alquileresCompletadosTotales;
-    }  
+    }
 
-   
     /**
      * Cambia el estado del vehículo (patrón State).
-     *
      * @param estado Nuevo estado.
      */
     public setEstado(estado: IVehiculoEstado): void {
@@ -181,38 +176,44 @@ export default abstract class Vehiculo {
         this.estado.setContexto(this);
     }
 
-    /** @returns 'true' si el vehículo está alquilado. */
+    /** 
+     * @returns 'true' si el vehículo está alquilado. 
+     */
     public estaEnAlquiler(): boolean {
         return this.estado.estaEnAlquiler();
     }
 
-    /** @returns 'true' si el vehículo está disponible. */
+    /** 
+     * @returns 'true' si el vehículo está disponible.
+     */
     public estaDisponible(): boolean {
         return this.estado.estaDisponible();
     }
 
-    /** @returns 'true' si el vehículo está en mantenimiento. */
+    /** 
+     * @returns 'true' si el vehículo está en mantenimiento. 
+     */
     public estaEnMantenimiento(): boolean {
         return this.estado.estaEnMantenimiento();
     }
 
-    /** Solicita al estado actual que intente alquilar el vehículo. */
+    /** 
+     * Solicita al estado actual que intente alquilar el vehículo. 
+     */
     public intentarAlquilar(): void {
         this.estado.alquilar();
     }
 
-    /** Solicita al estado actual que intente devolver el vehículo. */
+    /** 
+     * Solicita al estado actual que intente devolver el vehículo. 
+     */
     public intentarDevolver(): void {
         this.estado.devolver();
     }
- 
 
     /**
      * Calcula el costo final del alquiler del vehículo.
-     *
-     * Este método debe ser implementado por las subclases (Sedan, Suv, etc.)
-     * ya que la fórmula varía según el tipo de vehículo.
-     *
+     * Este método debe ser implementado por las subclases (Sedan, Suv, etc.) ya que la fórmula varía según el tipo de vehículo.
      * @param kilometrajeTotal Kilómetros recorridos durante el alquiler.
      * @param diasReservados Cantidad total de días reservados.
      * @param temporada Objeto que define el factor de ajuste aplicado.

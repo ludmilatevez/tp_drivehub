@@ -1,0 +1,49 @@
+@startuml DriveHub
+
+title Crear Reserva
+
+actor Cliente
+
+Cliente -> SistemaDeAlquiler : crearReserva(cliente, vehiculo, fechaInicio, fechaFin, temporada)
+
+activate SistemaDeAlquiler
+
+SistemaDeAlquiler -> VerificadorDisponibilidad : estaDisponible(vehiculo, fechaInicio, fechaFin)
+activate VerificadorDisponibilidad
+
+VerificadorDisponibilidad -> RepositorioVehiculos : obtenerPorMatricula(matricula)
+activate RepositorioVehiculos
+RepositorioVehiculos --> VerificadorDisponibilidad : vehiculoEncontrado
+deactivate RepositorioVehiculos
+
+VerificadorDisponibilidad -> vehiculo : estaDisponible()
+vehiculo --> VerificadorDisponibilidad : boolean
+
+VerificadorDisponibilidad -> RepositorioReservas : obtenerReservasEnConflicto(fechaInicio, fechaFin)
+activate RepositorioReservas
+RepositorioReservas --> VerificadorDisponibilidad : reservasConflicto[]
+deactivate RepositorioReservas
+
+VerificadorDisponibilidad --> SistemaDeAlquiler : boolean (disponible/no disponible)
+deactivate VerificadorDisponibilidad
+
+alt vehiculo NO disponible
+    SistemaDeAlquiler --> Cliente : Error("el vehiculo solicitado no esta disponible")
+    deactivate SistemaDeAlquiler
+else vehiculo disponible
+    SistemaDeAlquiler -> RepositorioReservas : agregarReserva(cliente, vehiculo, fechaInicio, fechaFin, temporada)
+    activate RepositorioReservas
+    RepositorioReservas --> SistemaDeAlquiler : (OK)
+    deactivate RepositorioReservas
+
+    SistemaDeAlquiler -> vehiculo : intentarAlquilar()
+    activate vehiculo
+    vehiculo -> EstadoActual : alquilar()
+    EstadoActual --> vehiculo : cambio de estado
+    deactivate vehiculo
+
+    SistemaDeAlquiler --> Cliente : Reserva creada exitosamente
+    deactivate SistemaDeAlquiler
+end
+
+@enduml

@@ -4,15 +4,11 @@ import Reserva from "./reserva";
 import Vehiculo from "./vehiculo";
 
 /**
- * Clase encargada de generar distintos reportes estadísticos sobre la flota de vehículos
- * y las reservas realizadas.
- *
- * Utiliza los repositorios de vehículos y reservas para obtener la información necesaria,
- * aplicando cálculos sobre:
+ * Clase encargada de generar distintos reportes estadísticos sobre la flota de vehículos y las reservas realizadas.
+ * Utiliza los repositorios de vehículos y reservas para obtener la información necesaria,aplicando cálculos sobre:
  * - Vehículos más y menos alquilados en un período.
  * - Vehículos con mayor y menor rentabilidad acumulada.
  * - Porcentaje de ocupación actual de la flota.
- *
  * Esta clase no devuelve datos estructurados, sino que imprime los resultados por consola.
  */
 export default class GeneradorReportes {
@@ -22,7 +18,6 @@ export default class GeneradorReportes {
 
     /**
      * Crea una instancia de 'GeneradorReportes'.
-     *
      * @param repositorioVehiculos - Repositorio desde el cual se obtienen los vehículos.
      * @param repositorioReservas - Repositorio desde el cual se obtienen las reservas.
      */
@@ -35,14 +30,11 @@ export default class GeneradorReportes {
     }
 
     /**
-     * Reporta cuál fue el vehículo **más** y **menos** alquilado dentro de un período.
-     *
+     * Reporta cuál fue el vehículo 'más' y 'menos alquilado dentro de un período.
      * El cálculo se basa en la cantidad total de alquileres registrados en cada vehículo
      * (método `getCantidadTotalAlquileres()`).
-     *
      * - Si no existen reservas en el período, se informa por consola.
      * - En caso contrario, se imprime la matrícula y cantidad de alquileres del más y menos solicitado.
-     *
      * @param fechaInicio - Fecha inicial del período a analizar.
      * @param fechaFin - Fecha final del período a analizar.
      */
@@ -91,10 +83,7 @@ export default class GeneradorReportes {
 
     /**
      * Reporta cuál es el vehículo con **mayor** y **menor** rentabilidad acumulada.
-     *
-     * El valor de rentabilidad proviene del método `vehiculo.getRentabilidad()`,
-     * el cual se incrementa con ingresos y se reduce con costos de mantenimiento.
-     *
+     * El valor de rentabilidad proviene del método `vehiculo.getRentabilidad()`, el cual se incrementa con ingresos y se reduce con costos de mantenimiento.
      * - Si no hay vehículos registrados, se informa por consola.
      * - En caso contrario, se muestran por consola las matrículas y rentabilidades extremas.
      */
@@ -133,14 +122,9 @@ export default class GeneradorReportes {
     }
 
     /**
-     * Calcula el **porcentaje de ocupación de la flota**.
-     *
-     * El cálculo se realiza así:
-     *
-     * 
+     * Calcula el 'porcentaje de ocupación de la flota'.
+     * El cálculo se realiza así: 
      * ocupación = (vehículos en alquiler / total de vehículos) * 100
-     * 
-     *
      * El resultado se imprime por consola.
      */
     public calcularOcupacionDeFlota(): void {

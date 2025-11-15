@@ -6,15 +6,12 @@ import { NOMBRE_ESTADO_DISPONIBLE } from "./constantes";
 
 /**
  * Representa el estado "Disponible" dentro del patrón State aplicado a Vehiculo.
- *
  * Un vehículo en estado disponible:
  * - Puede ser alquilado.
  * - Puede iniciar un proceso de mantenimiento.
  * - NO puede ser devuelto (ya está disponible).
  * - NO puede finalizar mantenimiento.
- *
- * Cada operación que implica un cambio de estado delega en el propio vehículo
- * la transición hacia un nuevo estado.
+ * Cada operación que implica un cambio de estado delega en el propio vehículo la transición hacia un nuevo estado.
  */
 export default class EstadoDisponible implements IVehiculoEstado {
 
@@ -22,7 +19,6 @@ export default class EstadoDisponible implements IVehiculoEstado {
 
     /**
      * Asocia el contexto (vehículo) al estado.
-     *
      * @param vehiculo - Instancia del vehículo que utiliza este estado.
      */
     public setContexto(vehiculo: Vehiculo): void {
@@ -31,7 +27,6 @@ export default class EstadoDisponible implements IVehiculoEstado {
 
     /**
      * Obtiene el nombre del estado.
-     *
      * @returns El nombre del estado: "Disponible".
      */
     public getNombre(): string {
@@ -49,7 +44,6 @@ export default class EstadoDisponible implements IVehiculoEstado {
     /**
      * Intenta devolver el vehículo.
      * No es posible devolver un vehículo que ya está disponible.
-     *
      * @throws Error Cuando se intenta devolver un vehículo disponible.
      */
     public devolver(): void {
@@ -67,7 +61,6 @@ export default class EstadoDisponible implements IVehiculoEstado {
     /**
      * Intenta finalizar el mantenimiento.
      * No es posible finalizar mantenimiento de un vehículo disponible.
-     *
      * @throws Error Si el vehículo no se encuentra en mantenimiento.
      */
     public finalizarMantenimiento(): void {
@@ -76,7 +69,6 @@ export default class EstadoDisponible implements IVehiculoEstado {
 
     /**
      * Indica si el vehículo está disponible.
-     *
      * @returns 'true', ya que este estado representa disponibilidad.
      */
     public estaDisponible(): boolean {
@@ -85,7 +77,6 @@ export default class EstadoDisponible implements IVehiculoEstado {
 
     /**
      * Indica si el vehículo está alquilado.
-     *
      * @returns 'false', ya que un vehículo disponible no está en alquiler.
      */
     public estaEnAlquiler(): boolean {
@@ -94,7 +85,6 @@ export default class EstadoDisponible implements IVehiculoEstado {
 
     /**
      * Indica si el vehículo está en mantenimiento.
-     *
      * @returns 'false', ya que un vehículo disponible no está en mantenimiento.
      */
     public estaEnMantenimiento(): boolean {

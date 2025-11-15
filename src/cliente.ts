@@ -8,7 +8,6 @@ export default class Cliente {
 
     /**
      * Crea una nueva instancia de Cliente.
-     *
      * @param id - Identificador único del cliente.
      * @param nombre - Nombre del cliente.  
      */
@@ -19,9 +18,7 @@ export default class Cliente {
 
     /**
      * Obtiene el identificador único del cliente.
-     *
      * @returns El ID del cliente.
-     *
      */
     public getID(): number {
         return this.id;
@@ -29,9 +26,7 @@ export default class Cliente {
 
     /**
      * Obtiene el nombre registrado del cliente.
-     *
      * @returns El nombre del cliente.
-     *
      */
     public getNombre(): string {
         return this.nombre;

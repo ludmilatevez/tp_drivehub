@@ -1,0 +1,4 @@
+# Carpetas generadas automáticamente que no deben subirse
+node_modules/
+coverage/
+dist/

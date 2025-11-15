@@ -4,14 +4,12 @@ import Vehiculo from "./vehiculo";
 import { NOMBRE_ESTADO_EN_ALQUILER } from "./constantes";
 /**
  * Representa el estado "En alquiler" dentro del patrón State utilizado por la clase 'Vehiculo'.
- *
  * Un vehículo en estado de alquiler:
- * - **No puede volver a alquilarse** (ya está alquilado).
- * - **Puede ser devuelto**, lo que cambia su estado a 'EstadoDisponible'.
- * - **No puede iniciar mantenimiento** mientras está alquilado.
- * - **No puede finalizar mantenimiento** porque no se encuentra en ese proceso.
- *
- * Este estado gestiona las reglas lógicas asociadas al ciclo de vida de un vehículo alquilado.
+ * - No puede volver a alquilarse (ya está alquilado).
+ * - Puede ser devuelto, lo que cambia su estado a 'EstadoDisponible'.
+ * - No puede iniciar mantenimiento mientras está alquilado.
+ * - No puede finalizar mantenimiento porque no se encuentra en ese proceso.
+ * Este estado gestiona las reglas lógicas asociadas al ciclo de un vehículo alquilado.
  */
 export default class EstadoEnAlquiler implements IVehiculoEstado {
 
@@ -19,7 +17,6 @@ export default class EstadoEnAlquiler implements IVehiculoEstado {
 
     /**
      * Asocia el contexto (vehículo) a este estado.
-     *
      * @param vehiculo - Vehículo cuyo estado se está administrando.
      */
     public setContexto(vehiculo: Vehiculo): void {
@@ -28,7 +25,6 @@ export default class EstadoEnAlquiler implements IVehiculoEstado {
 
     /**
      * Obtiene el nombre del estado.
-     *
      * @returns El nombre del estado: "En alquiler".
      */
     public getNombre(): string {
@@ -38,7 +34,6 @@ export default class EstadoEnAlquiler implements IVehiculoEstado {
     /**
      * Intenta alquilar el vehículo.
      * No es posible porque el vehículo ya está alquilado.
-     *
      * @throws Error Siempre, indicando que el vehículo ya está en alquiler.
      */
     public alquilar(): void {
@@ -48,9 +43,6 @@ export default class EstadoEnAlquiler implements IVehiculoEstado {
     /**
      * Devuelve el vehículo.
      * Esto cambia su estado a 'EstadoDisponible'.
-     *
-     * @example
-     * estado.devolver(); // EnAlquiler --> Disponible
      */
     public devolver(): void {
         this.vehiculo.setEstado(new EstadoDisponible());
@@ -59,7 +51,6 @@ export default class EstadoEnAlquiler implements IVehiculoEstado {
     /**
      * Intenta iniciar el mantenimiento.
      * No es posible mientras el vehículo está alquilado.
-     *
      * @throws Error Si se intenta iniciar mantenimiento sin haber devuelto el vehículo.
      */
     public iniciarMantenimiento(): void {
@@ -69,7 +60,6 @@ export default class EstadoEnAlquiler implements IVehiculoEstado {
     /**
      * Intenta finalizar el mantenimiento.
      * No se puede porque el vehículo en alquiler no está en mantenimiento.
-     *
      * @throws Error Siempre, ya que no corresponde a este estado.
      */
     public finalizarMantenimiento(): void {
@@ -78,7 +68,6 @@ export default class EstadoEnAlquiler implements IVehiculoEstado {
 
     /**
      * Indica si el vehículo está disponible.
-     *
      * @returns 'false', porque un vehículo alquilado no está disponible.
      */
     public estaDisponible(): boolean {
@@ -87,7 +76,6 @@ export default class EstadoEnAlquiler implements IVehiculoEstado {
 
     /**
      * Indica si el vehículo está en alquiler.
-     *
      * @returns 'true', porque este estado representa un vehículo alquilado.
      */
     public estaEnAlquiler(): boolean {
@@ -96,7 +84,6 @@ export default class EstadoEnAlquiler implements IVehiculoEstado {
 
     /**
      * Indica si el vehículo está en mantenimiento.
-     *
      * @returns 'false', ya que un vehículo alquilado no está en mantenimiento.
      */
     public estaEnMantenimiento(): boolean {
